@@ -1,0 +1,232 @@
+Notes
+=====
+
+
+Part 0: General Information
+---------------------------
+* Containers are a lightweight, portable way to package and deploy software applications.
+* Confirm that Docker installed correctly by opening a terminal and running:
+  docker -v
+* Git guide: https://guides.github.com/activities/hello-world/
+* Script command: https://linux.die.net/man/1/script
+
+
+Part 1: DevOps with Docker
+--------------------------
+* In DevOps, Dev refers to the development of software and Ops to operations.
+* Simple definition for DevOps would be that it means the release, configuring, and monitoring of software is in the hands of the very people who develop it.
+* Formal definition of DevOps by Jabbari et al.: https://dl.acm.org/citation.cfm?id=2962707
+  - "DevOps is a development methodology aimed at bridging the gap between Development and Operations, emphasizing communication and collaboration, continuous integration, quality assurance and delivery with automated deployment utilizing a set of development practices."
+* Stack Overflow 2023 Developer Survey: https://survey.stackoverflow.co/2023/
+* Work salary and experience by developer type: https://insights.stackoverflow.com/survey/2020#work-salary-and-experience-by-developer-type
+* How technologies are connected: https://survey.stackoverflow.co/2020#technology-how-technologies-are-connected
+* Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.
+  - Docker is a set of tools to deliver software in containers.
+  - Containers are packages of software.
+* Containers are isolated so that they don't interfere with each other or the software running outside of the containers.
+* Benefits from containers:
+  1. works on all machines
+  2. isolated environments
+  3. quickly set up development environments
+  4. scalable applications
+* Virtual Machines are not the same as Containers - they solve different problems.
+* Containers have a direct access to your own Operating Systems kernel and resources.
+* Docker uses Linux kernels.
+* Containers are instances of images.
+* Docker image provides all the necessary instructions and dependencies for the container to run, just like a recipe provides the steps and ingredients to make a meal.
+* In short, an image is like a blueprint or template, while a container is an instance of that blueprint or template.
+* A Docker image is immutable, they cannot be changed after they are created.
+* This image file is built from an instructional file named Dockerfile (default name) that is parsed when you run docker image build.
+* Dockerfile is the instruction set for building an image.
+* We're now 2 recipes deep, as Dockerfile is the recipe for an image and an image is the recipe for a container.
+* Containers only contain that which is required to execute an application; and you can start, stop and interact with them. They are isolated environments in the host machine with the ability to interact with each other and the host machine itself via defined methods (TCP/UDP).
+* "Docker Engine" that is made up of 3 parts: CLI (frontend), a REST API and Docker daemon (backend).
+* CLI commands: https://docs.docker.com/engine/reference/commandline/cli/
+* Before removing images, you should have the referencing container removed first.
+* Containers can be referenced by their ID or name
+  - Notice that the command also works with the first few characters of an ID. For example, docker container rm 3d4b
+* Dangling images are images that do not have a name and are not used.
+* The -d flag starts a container detached, meaning that it runs in the background.
+* The -t flag will create a tty when running containers.
+* The -i flag will instruct to pass the STDIN to the container.
+* Interact with the container by using the command line:
+  docker run -it ubuntu
+* Useful flags when running containers:
+  -i (interactive)
+  -t (tty)
+  -d (detached)
+  --rm (Automatically remove the container when it exits)
+  --name <CONTAINER_NAME>
+* Attach allows the attached window to control the running container from another terminal window.
+* If we want to attach to a container while making sure we don't close (stop) it from the other terminal we can specify to not attach STDIN with --no-stdin option.
+* See process IDs:
+  ps aux
+* Exit the container:
+  exit
+* Emulated execution may be less efficient in terms of performance than running the image on a compatible native processor architecture.
+* Quite a few popular images are so-called multi platform images (https://docs.docker.com/build/building/multi-platform/), which means that one image contains variations for different architectures. When you are about to pull or run such an image, Docker will detect the host architecture and give you the correct type of image.
+* An image like Ubuntu contains already a nice set of tools but sometimes just the one that we need is not within the standard distribution. We can install any software in the container by using apt-get (https://help.ubuntu.com/community/AptGet/Howto):
+  apt-get update
+  apt-get -y install nano
+* Installing a program or library to a container happens just like the installation is done in "normal" Ubuntu.
+  - The installation of Nano is not permanent, that is, if we remove our container, all is gone.
+* Connect to a running container and run processes inside it using exec.
+* Share the container "session" with attach.
+* Images are the basic building blocks for containers and other images.
+* When running a command such as docker run hello-world, Docker will automatically search Docker Hub for the image if it is not found locally.
+* Search for images in the Docker Hub with docker search.
+*  Official images (https://docs.docker.com/docker-hub/official_images/) are curated and reviewed by Docker, Inc. and are usually actively maintained by the authors. They are built from repositories in the docker-library (https://github.com/docker-library).
+* Automated images means that the image is automatically built (https://docs.docker.com/docker-hub/builds/) from the source repository. Its Docker Hub page (https://hub.docker.com/r/tutum/hello-world/) shows its previous "Builds" and a link to the image's "Source Repository" (in this case, to GitHub) from which Docker Hub builds the image.
+* There are also other Docker registries competing with Docker Hub, such as Quay (https://quay.io/).
+* By default, docker search will only search from Docker Hub, but to a search different registry, you can add the registry address before the search term, for example, docker search quay.io/hello. Alternatively, you can use the registry's web pages to search for images.
+* So, if the host's name (here: quay.io) is omitted, it will pull from Docker Hub by default.
+  docker pull quay.io/nordstrom/hello-world:2.0
+* Since we didn't specify a tag, Docker defaulted to latest, which is usually the latest image built and pushed to the registry. However, in this case, the repository's README (https://hub.docker.com/_/ubuntu) says that the ubuntu:latest tag points to the "latest LTS" instead since that's the version recommended for general use.
+* Images can be tagged to save different versions of the same image. You define an image's tag by adding :<tag> after the image's name.
+* Images are composed of different layers that are downloaded in parallel to speed up the download.
+* We can also tag images locally for convenience, for example, docker tag ubuntu:22.04 ubuntu:jammy_jellyfish creates the tag ubuntu:jammy_jellyfish which refers to ubuntu:22.04.
+  - Can be used for renaming images.
+* An image name may consist of 3 parts plus a tag. Usually like the following: registry/organisation/image:tag. But may be as short as ubuntu, then the registry will default to Docker hub, organisation to library and tag to latest. The organisation may also be a user, but calling it an organisation may be more clear.
+* Docker Hub: https://hub.docker.com/
+* Dockerfile is simply a file that contains the build instructions for an image.
+* Alpine (https://www.alpinelinux.org/) is a small Linux distribution that is often used to create small images.
+* Ubuntu images by default contain more tools to debug what is wrong when something doesn't work.
+* We will choose exactly which version of a given image we want to use instead of "latest". This guarantees that we don't accidentally update through a breaking change, and we know which images need updating when there are known security vulnerabilities in old images.
+* We can use the command docker build (https://docs.docker.com/engine/reference/commandline/build/) to turn the Dockerfile to an image.
+* By default docker build will look for a file named Dockerfile. Now we can run docker build with instructions where to build (.) and give it a name (-t <name>).
+  docker build . -t hello-docker
+* The steps here represent layers (https://docs.docker.com/build/guide/layers/) of the image so that each step is a new layer on top of the base image (alpine:3.19 in our case).
+* Layers have multiple functions. We often try to limit the number of layers to save on storage space but layers can work as a cache during build time. If we just edit the last lines of Dockerfile the build command can start from the previous layer and skip straight to the section that has changed.
+* COPY automatically detects changes in the files, so if we change the hello.sh it'll run from step 3/3, skipping 1 and 2. This can be used to create faster build pipelines.
+* It is also possible to manually create new layers on top of a image.
+* Use the command docker diff (https://docs.docker.com/reference/cli/docker/container/diff/) to check what has changed
+* Check what has changed in a container:
+  docker diff <CONTAINER>
+* The character in front of the file name indicates the type of the change in the container's filesystem: A = added, D = deleted, C = changed.
+* The command docker commit added a new layer on top of the image hello-docker, and the resulting image was given the name hello-docker-additional.
+* Defining the changes to the Dockerfile is much more sustainable method of managing changes than using "docker commit", and thus the latter should be avoided.
+* CMD is executed when we call docker run, unless we overwrite it.
+* The Docker documentation CMD says a bit indirectly that if a image has ENTRYPOINT defined, CMD is used to define it the default arguments.
+* Build a Docker image from a Dockerfile with a specific name:
+  docker build -f Dockerfile . -t web-server
+* Running a container and defining start conditions for it (instead of adding instructions one by one to Dockerfile and fails after each addition):
+  docker run -it ubuntu:22.04
+  apt-get update && apt-get install -y curl
+  curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+  chmod a+rx /usr/local/bin/yt-dlp
+  apt-get install -y python3
+  yt-dlp
+* So now when we know exactly what we need. Starting FROM ubuntu:22.04, we'll add the above steps to our Dockerfile. We should always try to keep the most prone to change rows at the bottom, by adding the instructions to the bottom we can preserve our cached layers - this is a handy practice to speed up the build process when there are time-consuming operations like downloads in the Dockerfile.
+* Override bash as our image command (set on the base image) with yt-dlp itself:
+  FROM ubuntu:22.04
+  # ...
+  CMD ["/usr/local/bin/yt-dlp"]
+* Given arguments replace the command or CMD (not working):
+  docker run yt-dlp https://www.youtube.com/watch?v=uTZSILGTskA
+* We can use ENTRYPOINT (https://docs.docker.com/engine/reference/builder/#entrypoint) to define the main executable and then Docker will combine our run arguments for it.
+* With ENTRYPOINT docker run now executed the combined /usr/local/bin/yt-dlp https://www.youtube.com/watch?v=uTZSILGTskA inside the container!
+* ENTRYPOINT vs CMD can be confusing - in a properly set up image, such as our yt-dlp, the command represents an argument list for the entrypoint. By default, the entrypoint in Docker is set as /bin/sh -c and this is passed if no entrypoint is set. This is why giving the path to a script file as CMD works: you're giving the file as a parameter to /bin/sh -c.
+* If an image defines both, then the CMD is used to give default arguments (https://docs.docker.com/engine/reference/builder/#cmd) to the entrypoint.
+* The argument defined by CMD can be overridden by giving one in the command line:
+  docker run yt-dlp https://www.youtube.com/watch?v=DptFY_MszQs
+* In addition to all seen, there are two ways to set the ENTRYPOINT and CMD: exec form and shell form. We've been using the exec form where the command itself is executed. In shell form the command that is executed is wrapped with /bin/sh -c - it's useful when you need to evaluate environment variables in the command like $MYSQL_PASSWORD or similar.
+* In the shell form, the command is provided as a string without brackets. In the exec form the command and it's arguments are provided as a list (with brackets).
+* In summary, ENTRYPOINT and CMD will be prefixed with /bin/sh -c when used without brackets.
+  Dockerfile                         | Resulting command
+  -------------------------------------------------------------------------------------
+  ENTRYPOINT /bin/ping -c 3          | /bin/sh -c '/bin/ping -c 3' /bin/sh -c localhost
+  CMD localhost                      | 
+  -------------------------------------------------------------------------------------
+  ENTRYPOINT ["/bin/ping","-c","3"]  | /bin/ping -c 3 /bin/sh -c localhost
+  CMD localhost                      | 
+  -------------------------------------------------------------------------------------
+  ENTRYPOINT /bin/ping -c 3          | /bin/sh -c '/bin/ping -c 3' localhost
+  CMD ["localhost"]                  | 
+  -------------------------------------------------------------------------------------
+  ENTRYPOINT ["/bin/ping","-c","3"]  | /bin/ping -c 3 localhost
+  CMD ["localhost"]                  | 
+  -------------------------------------------------------------------------------------
+* Most of the time we can ignore ENTRYPOINT when building our images and only use CMD. For example, Ubuntu image defaults the ENTRYPOINT to bash so we do not have to worry about it.
+* Copy the file from the container to the host machine using docker cp:
+  docker cp "upbeat_pascal://mydir/Welcome to Kumpula campus! ｜ University of Helsinki [DptFY_MszQs].mp4" .
+* We can use Docker volumes (https://docs.docker.com/storage/volumes/) to make it easier to store the downloads outside the container's ephemeral storage. With bind mount (https://docs.docker.com/storage/bind-mounts/) we can mount a file or directory from our own machine (the host machine) into the container.
+* The -v option requires an absolute path:
+  docker run -v "$(pwd):/mydir" yt-dlp "https://www.youtube.com/watch?v=DptFY_MszQs"
+* A volume is simply a folder (or a file) that is shared between the host machine and the container.
+* If we wish to create a volume with only a single file we could also do that by pointing to it. For example -v "$(pwd)/material.md:/mydir/material.md" this way we could edit the material.md locally and have it change in the container (and vice versa). Note also that -v creates a directory if the file does not exist.
+* Sending messages: Programs can send messages to URL addresses such as this: http://127.0.0.1:3000 where HTTP is the protocol, 127.0.0.1 is an IP address, and 3000 is a port. Note the IP part could also be a hostname: 127.0.0.1 is also called localhost so instead you could use http://localhost:3000.
+* Receiving messages: Programs can be assigned to listen to any available port. If a program is listening for traffic on port 3000, and a message is sent to that port, the program will receive and possibly process it.
+* The address 127.0.0.1 and hostname localhost are special ones, they refer to the machine or container itself, so if you are on a container and send a message to localhost, the target is the same container. Similarly, if you are sending the request from outside of a container to localhost, the target is your machine.
+* It is possible to map your host machine port to a container port.
+* Exposing a container port means telling Docker that the container listens to a certain port. This doesn't do much, except it helps humans with the configuration.
+  - To expose a port, add the line EXPOSE <port> in your Dockerfile
+* Publishing a port means that Docker will map host ports to the container ports.
+  - To publish a port, run the container with -p <host-port>:<container-port>
+  - If you leave out the host port and only specify the container port, Docker will automatically choose a free port as the host port:
+    docker run -p 4567 app-in-port
+* We could also limit connections to a certain protocol only, e.g. UDP by adding the protocol at the end: EXPOSE <port>/udp and -p <host-port>:<container-port>/udp
+* Here we did a quick trick to separate installing dependencies from the part where we copy the source code in. The COPY will copy both files Gemfile and Gemfile.lock to the current directory. This will help us by caching the dependency layers if we ever need to make changes to the source code. The same kind of caching trick works in many other languages or frameworks, such as Node.js.
+  COPY Gemfile* ./
+* The environment variables set using ENV will persist when a container is run from the resulting image. You can view the values using docker inspect, and change them using docker run --env <key>=<value>.
+* Docker CLI login (to authenticate our push):
+  docker login
+* Create an image to be pushed to Docker Hub:
+  docker tag streamlit-project mplaine/streamlit-project
+* Push an image to Docker Hub:
+  docker push mplaine/streamlit-project
+* Start recording terminal commands:
+  script [options] [file]
+  script exercise12_1.txt     # text output file
+  script -r exercise12_1.txt  # binary output file
+* Stop recording terminal commands:
+  exit
+* Replay recorded terminal commands:
+  cat exercise12_1.txt        # text input file
+  script -p exercise12_1.txt  # binary input file
+* Docker commands:
+  - Image:
+    - List all images: docker image ls
+    - Remove an image: docker image rm <IMAGE>
+    - Remove unused images: docker image prune
+    - Download image: docker image pull <IMAGE>
+    - Create a tag <TARGET_IMAGE> that refers to <SOURCE_IMAGE>: docker image tag <SOURCE_IMAGE>[:TAG] <TARGET_IMAGE>[:TAG]
+  - Container:
+    - List all containers: docker container ls -a
+    - List running containers: docker container ls --OR-- docker ps
+    - List and filter all containers: docker container ls -a | grep <FILTER>
+    - List last 3 containers: docker container ls -a --last 3
+    - Run a container (download the image if it is not available): docker container run <IMAGE>
+    - Run a container detached: docker container run -d <IMAGE>
+    - Remove a container: docker container rm <CONTAINER>
+    - Remove all stopped containers: docker container prune
+    - Stop a container: docker container stop <CONTAINER>
+    - Start a container: docker container start <CONTAINER>
+    - Execute a command inside the container: docker container exec <CONTAINER>
+    - Kill a running container: docker kill <CONTAINER>
+    - Run processes inside a container: docker exec <CONTAINER> <COMMAND>
+    - Execute the Bash shell in the container in interactive mode: docker exec -it <CONTAINER> bash
+    - Attach local standard input, output, and error streams to a running container: docker attach <CONTAINER>
+    - Attach local standard output and error streams to a running container: docker attach --no-stdin <CONTAINER>
+    - Pause all processes within a container: docker pause <CONTAINER>
+    - Unpause all processes within a container: docker unpause <CONTAINER>
+    - Copy files/folders between a container and the local filesystem: docker cp <SRC_PATH> <CONTAINER>:<DEST_PATH>
+    - Copy files/folders between a container and the local filesystem: docker cp <CONTAINER>:<SRC_PATH> <DEST_PATH>
+    - Inspect changes to files or directories on a container's filesystem: docker diff <CONTAINER>
+    - Create a new image from a container's changes: docker commit <CONTAINER> <NEW_IMAGE>
+  - Build:
+    - Build a Docker image: docker build <PATH>
+  - Log:
+    - Follow log output: docker logs -f <CONTAINER>
+  - System:
+    - Remove unused data: docker system prune
+  - Search:
+    - Search Docker Hub for images: docker search <KEYWORD>
+* Dockerfile commands (https://docs.docker.com/reference/dockerfile/):
+  - FROM: Create a new build stage from a base image.
+  - WORKDIR: Change working directory.
+  - COPY: Copy files and directories.
+  - RUN: Execute build commands.
+  - ENV: Set environment variables (persisted when a container is run from the resulting image).
+  - HEALTHCHECK: Check a container's health on startup.
+  - ENTRYPOINT: Specify default executable (cannot be overridden).
+  - CMD: Specify default commands (can be overridden).
