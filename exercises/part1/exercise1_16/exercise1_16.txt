@@ -1,0 +1,15 @@
+How to Deploy Apps on Render.com using Docker
+=============================================
+
+1. Sign in to Render.com
+2. Create a new web service
+3. Deploy an existing image from a registry
+4. Image URL: https://hub.docker.com/r/mplaine/interactive-employee-classifier
+5. Fill in name, region, and instance type (Free)
+6. Advanced: Fill in health check path: /_stcore/health
+7. Click "Create Web Service"
+
+Render automatically detected and handled ports. See https://community.render.com/t/how-ports-and-https-are-handled-for-docker-deploy/363
+The Dockerfile is included in the submission, but it is not needed for deployment on Render.com.
+
+Live app: https://interactive-employee-classifier.onrender.com/
