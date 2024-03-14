@@ -1,0 +1,34 @@
+Script started on Thu Mar 14 21:14:28 2024
+Restored session: Thu Mar 14 21:07:52 EET 2024
+[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_15[0m[27m[24m[J[34mpart1/exercise1_15[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mcat link.txt[27m[12D[27mc[27ma[27mt[27m [27ml[27mi[27mn[27mk[27m.[27mt[27mx[27mt[?2004l
+https://hub.docker.com/r/mplaine/interactive-employee-classifier
+[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_15[0m[27m[24m[J[34mpart1/exercise1_15[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker run -p 8501:8501 mplaine/interactive-employee-classifier[27m[63D[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mp[27m [27m8[27m5[27m0[27m1[27m:[27m8[27m5[27m0[27m1[27m [27mm[27mp[27ml[27ma[27mi[27mn[27me[27m/[27mi[27mn[27mt[27me[27mr[27ma[27mc[27mt[27mi[27mv[27me[27m-[27me[27mm[27mp[27ml[27mo[27my[27me[27me[27m-[27mc[27ml[27ma[27ms[27ms[27mi[27mf[27mi[27me[27mr[?2004l
+Unable to find image 'mplaine/interactive-employee-classifier:latest' locally
+latest: Pulling from mplaine/interactive-employee-classifier
+
+[1A[2K8a1e25ce7c4f: Already exists [1B
+[1A[2K1103112ebfc4: Already exists [1B
+[1A[2Kb4b80ef7128d: Already exists [1B
+[1A[2Kcc7f04ac52f8: Already exists [1B
+[1A[2K87b8bf94a2ac: Already exists [1B
+[1A[2Kda7a9e12839e: Already exists [1B
+[1A[2K937a07203b33: Already exists [1B
+[1A[2K611f8f9b2ba4: Already exists [1B
+[1A[2K995a2b9be58b: Already exists [1BDigest: sha256:136301b6fb5d3e24170a8a7958ec981e0b625653b2782c65179efff93b4c414b
+Status: Downloaded newer image for mplaine/interactive-employee-classifier:latest
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://0.0.0.0:8501
+
+^C  Stopping...
+[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_15[0m[27m[24m[J[34mpart1/exercise1_15[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Mar 14 21:15:10 2024
