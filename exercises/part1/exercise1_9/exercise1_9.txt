@@ -1,0 +1,56 @@
+Script started on Thu Mar 14 20:31:41 2024
+Restored session: Thu Mar 14 20:30:49 EET 2024
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_9[0m[27m[24m[J[34mpart1/exercise1_9[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mls -la[27m[27ml[27ms[27m [27m-[27ml[27ma[?2004l
+total 8
+drwxr-xr-x   3 markku  staff   96 Mar 14 20:31 .
+drwxr-xr-x  19 markku  staff  608 Mar 14 20:31 ..
+-rw-r--r--   1 markku  staff   43 Mar 14 20:31 exercise1_9.txt
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_9[0m[27m[24m[J[34mpart1/exercise1_9[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mtouch text.log[27m[14D[27mt[27mo[27mu[27mc[27mh[27m [27mt[27me[27mx[27mt[27m.[27ml[27mo[27mg[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_9[0m[27m[24m[J[34mpart1/exercise1_9[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004htouch text.log[14Dls -la        [8D[?2004l
+total 8
+drwxr-xr-x   4 markku  staff  128 Mar 14 20:31 .
+drwxr-xr-x  19 markku  staff  608 Mar 14 20:31 ..
+-rw-r--r--   1 markku  staff   43 Mar 14 20:31 exercise1_9.txt
+-rw-r--r--   1 markku  staff    0 Mar 14 20:31 text.log
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_9[0m[27m[24m[J[34mpart1/exercise1_9[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service[27m[87D[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mv[27m [27m"[27m$[27m([27mp[27mw[27md[27m)[27m/[27mt[27me[27mx[27mt[27m.[27ml[27mo[27mg[27m:[27m/[27mu[27ms[27mr[27m/[27ms[27mr[27mc[27m/[27ma[27mp[27mp[27m/[27mt[27me[27mx[27mt[27m.[27ml[27mo[27mg[27m"[27m [27md[27me[27mv[27mo[27mp[27ms[27md[27mo[27mc[27mk[27me[27mr[27mu[27mh[27m/[27ms[27mi[27mm[27mp[27ml[27me[27m-[27mw[27me[27mb[27m-[27ms[27me[27mr[27mv[27mi[27mc[27me[?2004l
+Unable to find image 'devopsdockeruh/simple-web-service:latest' locally
+latest: Pulling from devopsdockeruh/simple-web-service
+
+[1A[2Kcd2b813b068d: Pulling fs layer [1B
+[1A[2K4f4fb700ef54: Pulling fs layer [1B[2A[2Kcd2b813b068d: Downloading [>                                                  ]  51.18kB/5.117MB[2B[1A[2K4f4fb700ef54: Downloading [==================================================>]      32B/32B[1B[1A[2K4f4fb700ef54: Verifying Checksum [1B[1A[2K4f4fb700ef54: Download complete [1B[2A[2Kcd2b813b068d: Downloading [===>                                               ]  408.8kB/5.117MB[2B[2A[2Kcd2b813b068d: Downloading [=======>                                           ]    802kB/5.117MB[2B[2A[2Kcd2b813b068d: Downloading [=============>                                     ]   1.38MB/5.117MB[2B[2A[2Kcd2b813b068d: Downloading [=================>                                 ]  1.773MB/5.117MB[2B[2A[2Kcd2b813b068d: Downloading [=====================>                             ]  2.232MB/5.117MB[2B[2A[2Kcd2b813b068d: Downloading [=============================>                     ]  3.005MB/5.117MB[2B[2A[2Kcd2b813b068d: Downloading [=================================>                 ]  3.463MB/5.117MB[2B[2A[2Kcd2b813b068d: Downloading [======================================>            ]  3.922MB/5.117MB[2B[2A[2Kcd2b813b068d: Downloading [===========================================>       ]    4.5MB/5.117MB[2B[2A[2Kcd2b813b068d: Verifying Checksum [2B[2A[2Kcd2b813b068d: Download complete [2B[2A[2Kcd2b813b068d: Extracting [>                                                  ]  65.54kB/5.117MB[2B[2A[2Kcd2b813b068d: Extracting [=============================>                     ]  3.015MB/5.117MB[2B[2A[2Kcd2b813b068d: Extracting [==================================================>]  5.117MB/5.117MB[2B[2A[2Kcd2b813b068d: Pull complete [2B[1A[2K4f4fb700ef54: Extracting [==================================================>]      32B/32B[1B[1A[2K4f4fb700ef54: Extracting [==================================================>]      32B/32B[1B[1A[2K4f4fb700ef54: Pull complete [1BDigest: sha256:20282b20abae04beefa9637bb565943330ed5d085a22fcf8c4878abad80be712
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:latest
+Starting log output
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+^C[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_9[0m[27m[24m[J[34mpart1/exercise1_9[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mcat text.log[27m[12D[27mc[27ma[27mt[27m [27mt[27me[27mx[27mt[27m.[27ml[27mo[27mg[?2004l
+2024-03-14 18:32:17 +0000 UTC
+2024-03-14 18:32:19 +0000 UTC
+2024-03-14 18:32:21 +0000 UTC
+2024-03-14 18:32:23 +0000 UTC
+2024-03-14 18:32:25 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-03-14 18:32:27 +0000 UTC
+2024-03-14 18:32:29 +0000 UTC
+2024-03-14 18:32:31 +0000 UTC
+2024-03-14 18:32:33 +0000 UTC
+2024-03-14 18:32:35 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-03-14 18:32:37 +0000 UTC
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_9[0m[27m[24m[J[34mpart1/exercise1_9[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Mar 14 20:32:47 2024

@@ -1,73 +1,0 @@
-Script started on Sat Mar  9 19:20:20 2024
-Restored session: Sat Mar  9 19:19:41 EET 2024
-[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1[0m[27m[24m[J[34mexercises/part1[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004hddocker ps -a[?2004l
-CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                          PORTS     NAMES
-5315eec197bb   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) About a minute ago             clever_mccarthy
-dfad1a9690c7   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) About a minute ago             gallant_thompson
-c25d5fbc859c   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute               80/tcp    reverent_tu
-[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1[0m[27m[24m[J[34mexercises/part1[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004hddocker image ls[?2004l
-REPOSITORY                                                TAG                                                                          IMAGE ID       CREATED         SIZE
-nginx                                                     latest                                                                       e4720093a3c1   3 weeks ago     187MB
-docker/desktop-vpnkit-controller                          dc331cb22850be0cdd97c84a9cfecaf44a1afb6e                                     556098075b3d   9 months ago    36.2MB
-hubproxy.docker.internal:5555/docker/desktop-kubernetes   kubernetes-v1.25.9-cni-v1.1.1-critools-v1.25.0-cri-dockerd-v0.2.6-1-debian   23c4f114c8be   10 months ago   402MB
-registry.k8s.io/kube-apiserver                            v1.25.9                                                                      dc245db8c2fa   11 months ago   128MB
-registry.k8s.io/kube-controller-manager                   v1.25.9                                                                      3ea2571fcc83   11 months ago   117MB
-registry.k8s.io/kube-proxy                                v1.25.9                                                                      28d55f91d3d8   11 months ago   61.7MB
-registry.k8s.io/kube-scheduler                            v1.25.9                                                                      165df46c1bb9   11 months ago   50.7MB
-registry.k8s.io/etcd                                      3.5.6-0                                                                      fce326961ae2   15 months ago   299MB
-registry.k8s.io/kube-apiserver                            v1.25.4                                                                      00631e54acba   16 months ago   128MB
-registry.k8s.io/kube-proxy                                v1.25.4                                                                      2c2bc1864279   16 months ago   61.7MB
-registry.k8s.io/kube-controller-manager                   v1.25.4                                                                      8f59f6dfaed6   16 months ago   117MB
-registry.k8s.io/kube-scheduler                            v1.25.4                                                                      e2d17ec744c1   16 months ago   50.6MB
-registry.k8s.io/etcd                                      3.5.5-0                                                                      4694d02f8e61   18 months ago   300MB
-registry.k8s.io/pause                                     3.8                                                                          4873874c08ef   21 months ago   711kB
-registry.k8s.io/coredns/coredns                           v1.9.3                                                                       5185b96f0bec   21 months ago   48.8MB
-docker/desktop-storage-provisioner                        v2.0                                                                         99f89471f470   2 years ago     41.9MB
-[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1[0m[27m[24m[J[34mexercises/part1[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004hddocker container rm   stop c25[?2004l
-c25
-[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1[0m[27m[24m[J[34mexercises/part1[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004hdocker container stop c25       rm   prune[?2004l
-WARNING! This will remove all stopped containers.
-Are you sure you want to continue? [y/N] y
-Deleted Containers:
-5315eec197bbfc2c7a77007f369961de8774b38c703361d89e80c5bd503401a2
-dfad1a9690c78bdecd07e7fcefe2e4f169ea65976e3c731400170dfd131e2152
-c25d5fbc859c9d9e377f9f2bce2ce93fa9c7d8193f921d2bc4c476955ddce462
-
-Total reclaimed space: 3.279kB
-[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1[0m[27m[24m[J[34mexercises/part1[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004hddocker image rm nginx[?2004l
-Untagged: nginx:latest
-Untagged: nginx@sha256:c26ae7472d624ba1fafd296e73cecc4f93f853088e6a9c13c0d52f6ca5865107
-Deleted: sha256:e4720093a3c1381245b53a5a51b417963b3c4472d3f47fc301930a4f3b17666a
-Deleted: sha256:583de6ce675ade688fa76e7c18948b4907557a139e12825ae85e5a8c947e2c89
-Deleted: sha256:1084f34dba33ee0238270b757d7d4c3ffa06fcac38f1be5bf26bf35d8982eb17
-Deleted: sha256:eb8c0a03ddeb2a6164cddaa21c9795cf8e20dbe788ed6bcaa9cc2b5a58fa8aff
-Deleted: sha256:3a4f946657e22d88014e3063827b07c83ac6d999d7f7b19618037bcee5c5f009
-Deleted: sha256:0c2e669c3c8abe5ce516bd0ffbb3dec76614a9cd1dec058a7c4815a403adee83
-Deleted: sha256:0814ebf6e0ed919bf8bf686038d645aa2b535eb9a6bc4b58b2df1b31d499fe3d
-Deleted: sha256:ceb365432eec83dafc777cac5ee87737b093095035c89dd2eae01970c57b1d15
-[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1[0m[27m[24m[J[34mexercises/part1[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004hdocker image rm nginx[14Dcontainer prunestop c25[18Dimage ls          [10D[8Dps -a   [?2004l
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1[0m[27m[24m[J[34mexercises/part1[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004hdocker ps -aimage rm nginx[14Dcontainer prunestop c25[18Dimage ls          [10D[8Dps -a   image ls[?2004l
-REPOSITORY                                                TAG                                                                          IMAGE ID       CREATED         SIZE
-docker/desktop-vpnkit-controller                          dc331cb22850be0cdd97c84a9cfecaf44a1afb6e                                     556098075b3d   9 months ago    36.2MB
-hubproxy.docker.internal:5555/docker/desktop-kubernetes   kubernetes-v1.25.9-cni-v1.1.1-critools-v1.25.0-cri-dockerd-v0.2.6-1-debian   23c4f114c8be   10 months ago   402MB
-registry.k8s.io/kube-apiserver                            v1.25.9                                                                      dc245db8c2fa   11 months ago   128MB
-registry.k8s.io/kube-controller-manager                   v1.25.9                                                                      3ea2571fcc83   11 months ago   117MB
-registry.k8s.io/kube-proxy                                v1.25.9                                                                      28d55f91d3d8   11 months ago   61.7MB
-registry.k8s.io/kube-scheduler                            v1.25.9                                                                      165df46c1bb9   11 months ago   50.7MB
-registry.k8s.io/etcd                                      3.5.6-0                                                                      fce326961ae2   15 months ago   299MB
-registry.k8s.io/kube-apiserver                            v1.25.4                                                                      00631e54acba   16 months ago   128MB
-registry.k8s.io/kube-proxy                                v1.25.4                                                                      2c2bc1864279   16 months ago   61.7MB
-registry.k8s.io/kube-scheduler                            v1.25.4                                                                      e2d17ec744c1   16 months ago   50.6MB
-registry.k8s.io/kube-controller-manager                   v1.25.4                                                                      8f59f6dfaed6   16 months ago   117MB
-registry.k8s.io/etcd                                      3.5.5-0                                                                      4694d02f8e61   18 months ago   300MB
-registry.k8s.io/pause                                     3.8                                                                          4873874c08ef   21 months ago   711kB
-registry.k8s.io/coredns/coredns                           v1.9.3                                                                       5185b96f0bec   21 months ago   48.8MB
-docker/desktop-storage-provisioner                        v2.0                                                                         99f89471f470   2 years ago     41.9MB
-[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1[0m[27m[24m[J[34mexercises/part1[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004heexit[?2004l
-
-Saving session...
-...saving history...truncating history files...
-...completed.
-
-Script done on Sat Mar  9 19:21:37 2024

@@ -1,0 +1,42 @@
+Script started on Thu Mar 14 19:55:50 2024
+Restored session: Thu Mar 14 19:53:05 EET 2024
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_2[0m[27m[24m[J[34mpart1/exercise1_2[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker ps -a[27m[12D[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[27m [27m-[27ma[?2004l
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                     PORTS     NAMES
+d47b1deb19a0   nginx     "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes               80/tcp    pedantic_leavitt
+4e6fdf39e16e   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 3 minutes ago             stoic_noether
+657bfa1f5298   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 3 minutes ago             peaceful_euler
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_2[0m[27m[24m[J[34mpart1/exercise1_2[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker image ls[27m[15D[27md[27mo[27mc[27mk[27me[27mr[27m [27mi[27mm[27ma[27mg[27me[27m [27ml[27ms[?2004l
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+nginx        latest    92b11f67642b   4 weeks ago   187MB
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_2[0m[27m[24m[J[34mpart1/exercise1_2[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker container stop[27m[21D[27md[27mo[27mc[27mk[27me[27mr[27m [27mc[27mo[27mn[27mt[27ma[27mi[27mn[27me[27mr[27m [27ms[27mt[27mo[27mp d4[?2004l
+d4
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_2[0m[27m[24m[J[34mpart1/exercise1_2[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker container prune[27m[22D[27md[27mo[27mc[27mk[27me[27mr[27m [27mc[27mo[27mn[27mt[27ma[27mi[27mn[27me[27mr[27m [27mp[27mr[27mu[27mn[27me[?2004l
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+d47b1deb19a07e38aa1860ca06c7a14a733b1551655ec61da92e50b8b3c56afc
+4e6fdf39e16eea2853cb85a269f8ebc2a5842dce8725a6e186338ed52bb09812
+657bfa1f5298cd4152c4bc7a1d9b2d17cb138067e31409f9879a5131e5b3b50e
+
+Total reclaimed space: 3.279kB
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_2[0m[27m[24m[J[34mpart1/exercise1_2[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker image rm nginx[27m[21D[27md[27mo[27mc[27mk[27me[27mr[27m [27mi[27mm[27ma[27mg[27me[27m [27mr[27mm[27m [27mn[27mg[27mi[27mn[27mx[?2004l
+Untagged: nginx:latest
+Untagged: nginx@sha256:6db391d1c0cfb30588ba0bf72ea999404f2764febf0f1f196acd5867ac7efa7e
+Deleted: sha256:92b11f67642b62bbb98e7e49169c346b30e20cd3c1c034d31087e46924b9312e
+Deleted: sha256:d9e826dbb4b3c5770fe92638baa8c6614f210d782a5d021a123fe9fa1f92c23d
+Deleted: sha256:2a75285e888884bed4d630896c86ecd71739c6e82669e21ad7a050f33c9ac48d
+Deleted: sha256:32bfe3f040358ab8f9872a63d4ddefdc68f35d991ca10a812cbac5912ae9f97b
+Deleted: sha256:1330486eb62ea7e96f384961b77b0fc85f5d4422e761114ef3a72e7cb89751a4
+Deleted: sha256:a375372209a0f2b2c697a52cce46bc41b495bf86184ae83dd5146e20c22078eb
+Deleted: sha256:450787ca55caa59d0288de9cf36fc6b77d1b208a77eb837ec3d25b385f99cafb
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_2[0m[27m[24m[J[34mpart1/exercise1_2[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker ps -a[27m[12D[27md[27mo[27mc[27mk[27me[27mr[27m [27mp[27ms[27m [27m-[27ma[?2004l
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_2[0m[27m[24m[J[34mpart1/exercise1_2[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker image ls[27m[15D[27md[27mo[27mc[27mk[27me[27mr[27m [27mi[27mm[27ma[27mg[27me[27m [27ml[27ms[?2004l
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part1/exercise1_2[0m[27m[24m[J[34mpart1/exercise1_2[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Mar 14 19:56:50 2024
