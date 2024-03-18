@@ -1,0 +1,853 @@
+Script started on Mon Mar 18 21:22:01 2024
+Restored session: Mon Mar 18 21:20:58 EET 2024
+[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/docs/part2/codes/web_services/material-applications[0m[27m[24m[J[34mweb_services/material-applications[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker compose up -d[27m[20D[27md[27mo[27mc[27mk[27me[27mr[27m [27mc[27mo[27mm[27mp[27mo[27ms[27me[27m [27mu[27mp[27m [27m-[27md[?2004l
+[1A[1B[0G[?25l[+] Building 0.0s (0/0)  docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.0s (0/0)  docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.0s (0/0)  docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.0s (0/0)  docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.0s (0/0)  docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.0s (0/0)  docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.0s (0/0)  docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.0s (0/0)  docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.0s (0/0)  docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.0s (0/0)  docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.0s (0/0)  docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.0s (0/1)                                                                                                                                       docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.1s (0/2)                                                                                                                                       docker:desktop-linux
+ => [backend internal] load build definition from Dockerfile                                                                                                                  0.1s
+[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[?25h[1A[1A[1A[0G[?25l[+] Building 0.2s (1/2)                                                                                                                                       docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.4s (2/4)                                                                                                                                       docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     0.2s
+ => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      0.3s
+[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.6s (2/4)                                                                                                                                       docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     0.3s
+ => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      0.4s
+[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.7s (2/4)                                                                                                                                       docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     0.5s
+ => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      0.6s
+[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.9s (2/4)                                                                                                                                       docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     0.6s
+ => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      0.7s
+[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.0s (2/4)                                                                                                                                       docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     0.8s
+ => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      0.9s
+[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.2s (2/4)                                                                                                                                       docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     0.9s
+ => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.0s
+[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.3s (2/4)                                                                                                                                       docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.1s
+ => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.4s (3/4)                                                                                                                                       docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.3s
+[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.7s (5/6)                                                                                                                                       docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m => [frontend internal] load .dockerignore                                                                                                                                    0.3s
+[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.8s (6/6)                                                                                                                                       docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.9s (8/19)                                                                                                                                      docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m => [backend internal] load build context                                                                                                                                     0.1s
+[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m => [frontend internal] load build context                                                                                                                                    0.2s
+ => => transferring context:                                                                                                                                                  0.2s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.1s (12/19)                                                                                                                                     docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.3s (20/21)                                                                                                                                     docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m[34m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[0m[34m => CACHED [frontend 2/7] WORKDIR /usr/src/app                                                                                                                                0.0s
+[0m[34m => CACHED [frontend 3/7] COPY package*.json ./                                                                                                                               0.0s
+[0m[34m => CACHED [frontend 4/7] RUN npm install                                                                                                                                     0.0s
+[0m[34m => CACHED [frontend 5/7] RUN npm install -g serve                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 6/7] COPY . .                                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 7/7] RUN npm run build                                                                                                                                   0.0s
+[0m => [frontend] exporting to image                                                                                                                                             0.3s
+[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:375406c051a6b701152ed892273cb8ea38cf55267334923a4e403c66a828df04                                                                                  0.0s
+[0m => => naming to docker.io/library/material-applications-frontend                                                                                                             0.2s
+[34m => [backend] exporting to image                                                                                                                                              0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:15aaf06d8da3d2392418b87782e8af5a9abe98f0680c565e94f2cbb8fd3957ae                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-backend                                                                                                              0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.4s (21/21)                                                                                                                                     docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m[34m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[0m[34m => CACHED [frontend 2/7] WORKDIR /usr/src/app                                                                                                                                0.0s
+[0m[34m => CACHED [frontend 3/7] COPY package*.json ./                                                                                                                               0.0s
+[0m[34m => CACHED [frontend 4/7] RUN npm install                                                                                                                                     0.0s
+[0m[34m => CACHED [frontend 5/7] RUN npm install -g serve                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 6/7] COPY . .                                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 7/7] RUN npm run build                                                                                                                                   0.0s
+[0m[34m => [frontend] exporting to image                                                                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:375406c051a6b701152ed892273cb8ea38cf55267334923a4e403c66a828df04                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-frontend                                                                                                             0.1s
+[0m[34m => [backend] exporting to image                                                                                                                                              0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:15aaf06d8da3d2392418b87782e8af5a9abe98f0680c565e94f2cbb8fd3957ae                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-backend                                                                                                              0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.6s (21/21)                                                                                                                                     docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m[34m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[0m[34m => CACHED [frontend 2/7] WORKDIR /usr/src/app                                                                                                                                0.0s
+[0m[34m => CACHED [frontend 3/7] COPY package*.json ./                                                                                                                               0.0s
+[0m[34m => CACHED [frontend 4/7] RUN npm install                                                                                                                                     0.0s
+[0m[34m => CACHED [frontend 5/7] RUN npm install -g serve                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 6/7] COPY . .                                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 7/7] RUN npm run build                                                                                                                                   0.0s
+[0m[34m => [frontend] exporting to image                                                                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:375406c051a6b701152ed892273cb8ea38cf55267334923a4e403c66a828df04                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-frontend                                                                                                             0.1s
+[0m[34m => [backend] exporting to image                                                                                                                                              0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:15aaf06d8da3d2392418b87782e8af5a9abe98f0680c565e94f2cbb8fd3957ae                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-backend                                                                                                              0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.7s (21/21)                                                                                                                                     docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m[34m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[0m[34m => CACHED [frontend 2/7] WORKDIR /usr/src/app                                                                                                                                0.0s
+[0m[34m => CACHED [frontend 3/7] COPY package*.json ./                                                                                                                               0.0s
+[0m[34m => CACHED [frontend 4/7] RUN npm install                                                                                                                                     0.0s
+[0m[34m => CACHED [frontend 5/7] RUN npm install -g serve                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 6/7] COPY . .                                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 7/7] RUN npm run build                                                                                                                                   0.0s
+[0m[34m => [frontend] exporting to image                                                                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:375406c051a6b701152ed892273cb8ea38cf55267334923a4e403c66a828df04                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-frontend                                                                                                             0.1s
+[0m[34m => [backend] exporting to image                                                                                                                                              0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:15aaf06d8da3d2392418b87782e8af5a9abe98f0680c565e94f2cbb8fd3957ae                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-backend                                                                                                              0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 2.9s (21/21)                                                                                                                                     docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m[34m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[0m[34m => CACHED [frontend 2/7] WORKDIR /usr/src/app                                                                                                                                0.0s
+[0m[34m => CACHED [frontend 3/7] COPY package*.json ./                                                                                                                               0.0s
+[0m[34m => CACHED [frontend 4/7] RUN npm install                                                                                                                                     0.0s
+[0m[34m => CACHED [frontend 5/7] RUN npm install -g serve                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 6/7] COPY . .                                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 7/7] RUN npm run build                                                                                                                                   0.0s
+[0m[34m => [frontend] exporting to image                                                                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:375406c051a6b701152ed892273cb8ea38cf55267334923a4e403c66a828df04                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-frontend                                                                                                             0.1s
+[0m[34m => [backend] exporting to image                                                                                                                                              0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:15aaf06d8da3d2392418b87782e8af5a9abe98f0680c565e94f2cbb8fd3957ae                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-backend                                                                                                              0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.0s (21/21)                                                                                                                                     docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m[34m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[0m[34m => CACHED [frontend 2/7] WORKDIR /usr/src/app                                                                                                                                0.0s
+[0m[34m => CACHED [frontend 3/7] COPY package*.json ./                                                                                                                               0.0s
+[0m[34m => CACHED [frontend 4/7] RUN npm install                                                                                                                                     0.0s
+[0m[34m => CACHED [frontend 5/7] RUN npm install -g serve                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 6/7] COPY . .                                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 7/7] RUN npm run build                                                                                                                                   0.0s
+[0m[34m => [frontend] exporting to image                                                                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:375406c051a6b701152ed892273cb8ea38cf55267334923a4e403c66a828df04                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-frontend                                                                                                             0.1s
+[0m[34m => [backend] exporting to image                                                                                                                                              0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:15aaf06d8da3d2392418b87782e8af5a9abe98f0680c565e94f2cbb8fd3957ae                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-backend                                                                                                              0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.2s (21/21)                                                                                                                                     docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m[34m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[0m[34m => CACHED [frontend 2/7] WORKDIR /usr/src/app                                                                                                                                0.0s
+[0m[34m => CACHED [frontend 3/7] COPY package*.json ./                                                                                                                               0.0s
+[0m[34m => CACHED [frontend 4/7] RUN npm install                                                                                                                                     0.0s
+[0m[34m => CACHED [frontend 5/7] RUN npm install -g serve                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 6/7] COPY . .                                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 7/7] RUN npm run build                                                                                                                                   0.0s
+[0m[34m => [frontend] exporting to image                                                                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:375406c051a6b701152ed892273cb8ea38cf55267334923a4e403c66a828df04                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-frontend                                                                                                             0.1s
+[0m[34m => [backend] exporting to image                                                                                                                                              0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:15aaf06d8da3d2392418b87782e8af5a9abe98f0680c565e94f2cbb8fd3957ae                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-backend                                                                                                              0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.3s (21/21)                                                                                                                                     docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m[34m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[0m[34m => CACHED [frontend 2/7] WORKDIR /usr/src/app                                                                                                                                0.0s
+[0m[34m => CACHED [frontend 3/7] COPY package*.json ./                                                                                                                               0.0s
+[0m[34m => CACHED [frontend 4/7] RUN npm install                                                                                                                                     0.0s
+[0m[34m => CACHED [frontend 5/7] RUN npm install -g serve                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 6/7] COPY . .                                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 7/7] RUN npm run build                                                                                                                                   0.0s
+[0m[34m => [frontend] exporting to image                                                                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:375406c051a6b701152ed892273cb8ea38cf55267334923a4e403c66a828df04                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-frontend                                                                                                             0.1s
+[0m[34m => [backend] exporting to image                                                                                                                                              0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:15aaf06d8da3d2392418b87782e8af5a9abe98f0680c565e94f2cbb8fd3957ae                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-backend                                                                                                              0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.5s (21/21)                                                                                                                                     docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m[34m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[0m[34m => CACHED [frontend 2/7] WORKDIR /usr/src/app                                                                                                                                0.0s
+[0m[34m => CACHED [frontend 3/7] COPY package*.json ./                                                                                                                               0.0s
+[0m[34m => CACHED [frontend 4/7] RUN npm install                                                                                                                                     0.0s
+[0m[34m => CACHED [frontend 5/7] RUN npm install -g serve                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 6/7] COPY . .                                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 7/7] RUN npm run build                                                                                                                                   0.0s
+[0m[34m => [frontend] exporting to image                                                                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:375406c051a6b701152ed892273cb8ea38cf55267334923a4e403c66a828df04                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-frontend                                                                                                             0.1s
+[0m[34m => [backend] exporting to image                                                                                                                                              0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:15aaf06d8da3d2392418b87782e8af5a9abe98f0680c565e94f2cbb8fd3957ae                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-backend                                                                                                              0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.6s (21/21)                                                                                                                                     docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m[34m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[0m[34m => CACHED [frontend 2/7] WORKDIR /usr/src/app                                                                                                                                0.0s
+[0m[34m => CACHED [frontend 3/7] COPY package*.json ./                                                                                                                               0.0s
+[0m[34m => CACHED [frontend 4/7] RUN npm install                                                                                                                                     0.0s
+[0m[34m => CACHED [frontend 5/7] RUN npm install -g serve                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 6/7] COPY . .                                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 7/7] RUN npm run build                                                                                                                                   0.0s
+[0m[34m => [frontend] exporting to image                                                                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:375406c051a6b701152ed892273cb8ea38cf55267334923a4e403c66a828df04                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-frontend                                                                                                             0.1s
+[0m[34m => [backend] exporting to image                                                                                                                                              0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:15aaf06d8da3d2392418b87782e8af5a9abe98f0680c565e94f2cbb8fd3957ae                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-backend                                                                                                              0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.8s (21/21)                                                                                                                                     docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m[34m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[0m[34m => CACHED [frontend 2/7] WORKDIR /usr/src/app                                                                                                                                0.0s
+[0m[34m => CACHED [frontend 3/7] COPY package*.json ./                                                                                                                               0.0s
+[0m[34m => CACHED [frontend 4/7] RUN npm install                                                                                                                                     0.0s
+[0m[34m => CACHED [frontend 5/7] RUN npm install -g serve                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 6/7] COPY . .                                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 7/7] RUN npm run build                                                                                                                                   0.0s
+[0m[34m => [frontend] exporting to image                                                                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:375406c051a6b701152ed892273cb8ea38cf55267334923a4e403c66a828df04                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-frontend                                                                                                             0.1s
+[0m[34m => [backend] exporting to image                                                                                                                                              0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:15aaf06d8da3d2392418b87782e8af5a9abe98f0680c565e94f2cbb8fd3957ae                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-backend                                                                                                              0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 3.8s (21/21) FINISHED                                                                                                                            docker:desktop-linux
+[34m => [backend internal] load build definition from Dockerfile                                                                                                                  0.2s
+[0m[34m => => transferring dockerfile: 344B                                                                                                                                          0.0s
+[0m[34m => [frontend internal] load build definition from Dockerfile                                                                                                                 0.2s
+[0m[34m => => transferring dockerfile: 529B                                                                                                                                          0.1s
+[0m[34m => [backend internal] load metadata for docker.io/library/golang:1.16.15                                                                                                     1.2s
+[0m[34m => [frontend internal] load metadata for docker.io/library/node:16.20.2                                                                                                      1.2s
+[0m[34m => [backend internal] load .dockerignore                                                                                                                                     0.1s
+[0m[34m => => transferring context: 111B                                                                                                                                             0.0s
+[0m[34m => [frontend internal] load .dockerignore                                                                                                                                    0.4s
+[0m[34m => => transferring context: 87B                                                                                                                                              0.0s
+[0m[34m => [backend 1/4] FROM docker.io/library/golang:1.16.15@sha256:5f6a4662de3efc6d6bb812d02e9de3d8698eea16b8eb7281f03e6f3e8383018e                                               0.0s
+[0m[34m => [backend internal] load build context                                                                                                                                     0.1s
+[0m[34m => => transferring context: 499B                                                                                                                                             0.0s
+[0m[34m => [frontend 1/7] FROM docker.io/library/node:16.20.2@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b                                                0.0s
+[0m[34m => [frontend internal] load build context                                                                                                                                    0.1s
+[0m[34m => => transferring context: 1.21kB                                                                                                                                           0.0s
+[0m[34m => CACHED [backend 2/4] WORKDIR /usr/src/app                                                                                                                                 0.0s
+[0m[34m => CACHED [backend 3/4] COPY . .                                                                                                                                             0.0s
+[0m[34m => CACHED [backend 4/4] RUN go build                                                                                                                                         0.0s
+[0m[34m => CACHED [frontend 2/7] WORKDIR /usr/src/app                                                                                                                                0.0s
+[0m[34m => CACHED [frontend 3/7] COPY package*.json ./                                                                                                                               0.0s
+[0m[34m => CACHED [frontend 4/7] RUN npm install                                                                                                                                     0.0s
+[0m[34m => CACHED [frontend 5/7] RUN npm install -g serve                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 6/7] COPY . .                                                                                                                                            0.0s
+[0m[34m => CACHED [frontend 7/7] RUN npm run build                                                                                                                                   0.0s
+[0m[34m => [frontend] exporting to image                                                                                                                                             0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:375406c051a6b701152ed892273cb8ea38cf55267334923a4e403c66a828df04                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-frontend                                                                                                             0.1s
+[0m[34m => [backend] exporting to image                                                                                                                                              0.1s
+[0m[34m => => exporting layers                                                                                                                                                       0.0s
+[0m[34m => => writing image sha256:15aaf06d8da3d2392418b87782e8af5a9abe98f0680c565e94f2cbb8fd3957ae                                                                                  0.0s
+[0m[34m => => naming to docker.io/library/material-applications-backend                                                                                                              0.1s
+[0m[?25h[1A[1B[0G[?25l[+] Running 0/0
+ [33m⠋[0m Network material-applications_default  Creating                                                                                                                            [34m0.0s [0m
+[?25h[1A[1A[0G[?25l[+] Running 0/1
+ [33m⠙[0m Network material-applications_default  Creating                                                                                                                            [34m0.1s [0m
+[?25h[1A[1A[0G[?25l[+] Running 0/1
+ [33m⠹[0m Network material-applications_default  Creating                                                                                                                            [34m0.2s [0m
+[?25h[1A[1A[0G[?25l[+] Running 0/1
+ [33m⠸[0m Network material-applications_default  Creating                                                                                                                            [34m0.3s [0m
+[?25h[1A[1A[0G[?25l[+] Running 0/1
+ [33m⠼[0m Network material-applications_default  Creating                                                                                                                            [34m0.4s [0m
+[?25h[1A[1A[0G[?25l[+] Running 0/1
+ [33m⠴[0m Network material-applications_default  Creating                                                                                                                            [34m0.5s [0m
+[?25h[1A[1A[0G[?25l[+] Running 0/1
+ [33m⠦[0m Network material-applications_default  Creating                                                                                                                            [34m0.6s [0m
+[?25h[1A[1A[0G[?25l[+] Running 0/1
+ [33m⠧[0m Network material-applications_default  Creating                                                                                                                            [34m0.7s [0m
+[?25h[1A[1A[0G[?25l[+] Running 0/1
+ [33m⠇[0m Network material-applications_default  Created                                                                                                                             [34m0.8s [0m
+ [33m⠋[0m Container backend-project              Creating                                                                                                                            [34m0.1s [0m
+ [33m⠋[0m Container frontend-project             Creating                                                                                                                            [34m0.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠏[0m Network material-applications_default  Created                                                                                                                             [34m0.9s [0m
+ [33m⠙[0m Container backend-project              Creating                                                                                                                            [34m0.2s [0m
+ [33m⠙[0m Container frontend-project             Creating                                                                                                                            [34m0.2s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠋[0m Network material-applications_default  Created                                                                                                                             [34m1.0s [0m
+ [33m⠹[0m Container backend-project              Creating                                                                                                                            [34m0.3s [0m
+ [33m⠹[0m Container frontend-project             Creating                                                                                                                            [34m0.3s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠙[0m Network material-applications_default  Created                                                                                                                             [34m1.1s [0m
+ [33m⠸[0m Container backend-project              Creating                                                                                                                            [34m0.4s [0m
+ [33m⠸[0m Container frontend-project             Creating                                                                                                                            [34m0.4s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠹[0m Network material-applications_default  Created                                                                                                                             [34m1.2s [0m
+ [33m⠼[0m Container backend-project              Creating                                                                                                                            [34m0.5s [0m
+ [33m⠼[0m Container frontend-project             Creating                                                                                                                            [34m0.5s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠸[0m Network material-applications_default  Created                                                                                                                             [34m1.3s [0m
+ [33m⠴[0m Container backend-project              Creating                                                                                                                            [34m0.6s [0m
+ [33m⠴[0m Container frontend-project             Creating                                                                                                                            [34m0.6s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠼[0m Network material-applications_default  Created                                                                                                                             [34m1.4s [0m
+ [33m⠦[0m Container backend-project              Creating                                                                                                                            [34m0.7s [0m
+ [33m⠦[0m Container frontend-project             Creating                                                                                                                            [34m0.7s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠴[0m Network material-applications_default  Created                                                                                                                             [34m1.5s [0m
+ [33m⠧[0m Container backend-project              Creating                                                                                                                            [34m0.8s [0m
+ [33m⠧[0m Container frontend-project             Creating                                                                                                                            [34m0.8s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠦[0m Network material-applications_default  Created                                                                                                                             [34m1.6s [0m
+ [33m⠇[0m Container backend-project              Creating                                                                                                                            [34m0.9s [0m
+ [33m⠇[0m Container frontend-project             Creating                                                                                                                            [34m0.9s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠧[0m Network material-applications_default  Created                                                                                                                             [34m1.7s [0m
+ [33m⠏[0m Container backend-project              Creating                                                                                                                            [34m1.0s [0m
+ [33m⠏[0m Container frontend-project             Creating                                                                                                                            [34m1.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠇[0m Network material-applications_default  Created                                                                                                                             [34m1.8s [0m
+ [33m⠋[0m Container backend-project              Creating                                                                                                                            [34m1.1s [0m
+ [33m⠋[0m Container frontend-project             Creating                                                                                                                            [34m1.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠏[0m Network material-applications_default  Created                                                                                                                             [34m1.9s [0m
+ [33m⠙[0m Container backend-project              Creating                                                                                                                            [34m1.2s [0m
+ [33m⠙[0m Container frontend-project             Creating                                                                                                                            [34m1.2s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠋[0m Network material-applications_default  Created                                                                                                                             [34m2.0s [0m
+ [33m⠹[0m Container backend-project              Creating                                                                                                                            [34m1.3s [0m
+ [33m⠹[0m Container frontend-project             Creating                                                                                                                            [34m1.3s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠙[0m Network material-applications_default  Created                                                                                                                             [34m2.1s [0m
+ [33m⠸[0m Container backend-project              Creating                                                                                                                            [34m1.4s [0m
+ [33m⠸[0m Container frontend-project             Creating                                                                                                                            [34m1.4s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠹[0m Network material-applications_default  Created                                                                                                                             [34m2.2s [0m
+ [33m⠼[0m Container backend-project              Creating                                                                                                                            [34m1.5s [0m
+ [33m⠼[0m Container frontend-project             Creating                                                                                                                            [34m1.5s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠸[0m Network material-applications_default  Created                                                                                                                             [34m2.3s [0m
+ [33m⠴[0m Container backend-project              Creating                                                                                                                            [34m1.6s [0m
+ [33m⠴[0m Container frontend-project             Creating                                                                                                                            [34m1.6s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠼[0m Network material-applications_default  Created                                                                                                                             [34m2.4s [0m
+ [33m⠦[0m Container backend-project              Creating                                                                                                                            [34m1.7s [0m
+ [33m⠦[0m Container frontend-project             Creating                                                                                                                            [34m1.7s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠴[0m Network material-applications_default  Created                                                                                                                             [34m2.5s [0m
+ [33m⠧[0m Container backend-project              Creating                                                                                                                            [34m1.8s [0m
+ [33m⠧[0m Container frontend-project             Creating                                                                                                                            [34m1.8s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠦[0m Network material-applications_default  Created                                                                                                                             [34m2.6s [0m
+ [33m⠇[0m Container backend-project              Creating                                                                                                                            [34m1.9s [0m
+ [33m⠇[0m Container frontend-project             Creating                                                                                                                            [34m1.9s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠧[0m Network material-applications_default  Created                                                                                                                             [34m2.7s [0m
+ [33m⠏[0m Container backend-project              Creating                                                                                                                            [34m2.0s [0m
+ [33m⠏[0m Container frontend-project             Creating                                                                                                                            [34m2.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠇[0m Network material-applications_default  Created                                                                                                                             [34m2.8s [0m
+ [33m⠋[0m Container backend-project              Created                                                                                                                             [34m2.1s [0m
+ [33m⠋[0m Container frontend-project             Created                                                                                                                             [34m2.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠏[0m Network material-applications_default  Created                                                                                                                             [34m2.9s [0m
+ [33m⠙[0m Container backend-project              Created                                                                                                                             [34m2.2s [0m
+ [33m⠙[0m Container frontend-project             Created                                                                                                                             [34m2.2s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠋[0m Network material-applications_default  Created                                                                                                                             [34m3.0s [0m
+ [33m⠹[0m Container backend-project              Starting                                                                                                                            [34m2.3s [0m
+ [33m⠹[0m Container frontend-project             Starting                                                                                                                            [34m2.3s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠙[0m Network material-applications_default  Created                                                                                                                             [34m3.1s [0m
+ [33m⠸[0m Container backend-project              Starting                                                                                                                            [34m2.4s [0m
+ [33m⠸[0m Container frontend-project             Starting                                                                                                                            [34m2.4s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠹[0m Network material-applications_default  Created                                                                                                                             [34m3.3s [0m
+ [33m⠼[0m Container backend-project              Starting                                                                                                                            [34m2.5s [0m
+ [33m⠼[0m Container frontend-project             Starting                                                                                                                            [34m2.5s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠸[0m Network material-applications_default  Created                                                                                                                             [34m3.3s [0m
+ [33m⠴[0m Container backend-project              Starting                                                                                                                            [34m2.6s [0m
+ [33m⠴[0m Container frontend-project             Starting                                                                                                                            [34m2.6s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠼[0m Network material-applications_default  Created                                                                                                                             [34m3.4s [0m
+ [33m⠦[0m Container backend-project              Starting                                                                                                                            [34m2.7s [0m
+ [33m⠦[0m Container frontend-project             Starting                                                                                                                            [34m2.7s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠴[0m Network material-applications_default  Created                                                                                                                             [34m3.5s [0m
+ [33m⠧[0m Container backend-project              Starting                                                                                                                            [34m2.8s [0m
+ [33m⠧[0m Container frontend-project             Starting                                                                                                                            [34m2.8s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠦[0m Network material-applications_default  Created                                                                                                                             [34m3.6s [0m
+ [33m⠇[0m Container backend-project              Starting                                                                                                                            [34m2.9s [0m
+ [33m⠇[0m Container frontend-project             Starting                                                                                                                            [34m2.9s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠧[0m Network material-applications_default  Created                                                                                                                             [34m3.7s [0m
+ [33m⠏[0m Container backend-project              Starting                                                                                                                            [34m3.0s [0m
+ [33m⠏[0m Container frontend-project             Starting                                                                                                                            [34m3.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠇[0m Network material-applications_default  Created                                                                                                                             [34m3.8s [0m
+ [33m⠋[0m Container backend-project              Starting                                                                                                                            [34m3.1s [0m
+ [33m⠋[0m Container frontend-project             Starting                                                                                                                            [34m3.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠏[0m Network material-applications_default  Created                                                                                                                             [34m3.9s [0m
+ [33m⠙[0m Container backend-project              Starting                                                                                                                            [34m3.2s [0m
+ [33m⠙[0m Container frontend-project             Starting                                                                                                                            [34m3.2s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠋[0m Network material-applications_default  Created                                                                                                                             [34m4.0s [0m
+ [33m⠹[0m Container backend-project              Starting                                                                                                                            [34m3.3s [0m
+ [33m⠹[0m Container frontend-project             Starting                                                                                                                            [34m3.3s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠙[0m Network material-applications_default  Created                                                                                                                             [34m4.1s [0m
+ [33m⠸[0m Container backend-project              Starting                                                                                                                            [34m3.4s [0m
+ [33m⠸[0m Container frontend-project             Starting                                                                                                                            [34m3.4s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠹[0m Network material-applications_default  Created                                                                                                                             [34m4.2s [0m
+ [33m⠼[0m Container backend-project              Starting                                                                                                                            [34m3.5s [0m
+ [33m⠼[0m Container frontend-project             Starting                                                                                                                            [34m3.5s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠸[0m Network material-applications_default  Created                                                                                                                             [34m4.3s [0m
+ [33m⠴[0m Container backend-project              Starting                                                                                                                            [34m3.6s [0m
+ [33m⠴[0m Container frontend-project             Starting                                                                                                                            [34m3.6s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠼[0m Network material-applications_default  Created                                                                                                                             [34m4.4s [0m
+ [33m⠦[0m Container backend-project              Starting                                                                                                                            [34m3.7s [0m
+ [33m⠦[0m Container frontend-project             Starting                                                                                                                            [34m3.7s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠴[0m Network material-applications_default  Created                                                                                                                             [34m4.5s [0m
+ [33m⠧[0m Container backend-project              Starting                                                                                                                            [34m3.8s [0m
+ [33m⠧[0m Container frontend-project             Starting                                                                                                                            [34m3.8s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠦[0m Network material-applications_default  Created                                                                                                                             [34m4.6s [0m
+ [33m⠇[0m Container backend-project              Starting                                                                                                                            [34m3.9s [0m
+ [33m⠇[0m Container frontend-project             Starting                                                                                                                            [34m3.9s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠧[0m Network material-applications_default  Created                                                                                                                             [34m4.7s [0m
+ [33m⠏[0m Container backend-project              Starting                                                                                                                            [34m4.0s [0m
+ [33m⠏[0m Container frontend-project             Starting                                                                                                                            [34m4.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠇[0m Network material-applications_default  Created                                                                                                                             [34m4.8s [0m
+ [33m⠋[0m Container backend-project              Starting                                                                                                                            [34m4.1s [0m
+ [33m⠋[0m Container frontend-project             Starting                                                                                                                            [34m4.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠏[0m Network material-applications_default  Created                                                                                                                             [34m4.9s [0m
+ [33m⠙[0m Container backend-project              Starting                                                                                                                            [34m4.2s [0m
+ [33m⠙[0m Container frontend-project             Starting                                                                                                                            [34m4.2s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠋[0m Network material-applications_default  Created                                                                                                                             [34m5.0s [0m
+ [33m⠹[0m Container backend-project              Starting                                                                                                                            [34m4.3s [0m
+ [33m⠹[0m Container frontend-project             Starting                                                                                                                            [34m4.3s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠙[0m Network material-applications_default  Created                                                                                                                             [34m5.1s [0m
+ [33m⠸[0m Container backend-project              Starting                                                                                                                            [34m4.4s [0m
+ [33m⠸[0m Container frontend-project             Starting                                                                                                                            [34m4.4s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠹[0m Network material-applications_default  Created                                                                                                                             [34m5.2s [0m
+ [33m⠼[0m Container backend-project              Starting                                                                                                                            [34m4.5s [0m
+ [33m⠼[0m Container frontend-project             Starting                                                                                                                            [34m4.5s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠸[0m Network material-applications_default  Created                                                                                                                             [34m5.3s [0m
+ [33m⠴[0m Container backend-project              Starting                                                                                                                            [34m4.6s [0m
+ [33m⠴[0m Container frontend-project             Starting                                                                                                                            [34m4.6s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠼[0m Network material-applications_default  Created                                                                                                                             [34m5.4s [0m
+ [33m⠦[0m Container backend-project              Starting                                                                                                                            [34m4.7s [0m
+ [33m⠦[0m Container frontend-project             Starting                                                                                                                            [34m4.7s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠴[0m Network material-applications_default  Created                                                                                                                             [34m5.5s [0m
+ [33m⠧[0m Container backend-project              Starting                                                                                                                            [34m4.8s [0m
+ [33m⠧[0m Container frontend-project             Starting                                                                                                                            [34m4.8s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠦[0m Network material-applications_default  Created                                                                                                                             [34m5.6s [0m
+ [33m⠇[0m Container backend-project              Starting                                                                                                                            [34m4.9s [0m
+ [33m⠇[0m Container frontend-project             Starting                                                                                                                            [34m4.9s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠧[0m Network material-applications_default  Created                                                                                                                             [34m5.7s [0m
+ [33m⠏[0m Container backend-project              Starting                                                                                                                            [34m5.0s [0m
+ [33m⠏[0m Container frontend-project             Starting                                                                                                                            [34m5.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠇[0m Network material-applications_default  Created                                                                                                                             [34m5.8s [0m
+ [33m⠋[0m Container backend-project              Starting                                                                                                                            [34m5.1s [0m
+ [33m⠋[0m Container frontend-project             Starting                                                                                                                            [34m5.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠏[0m Network material-applications_default  Created                                                                                                                             [34m5.9s [0m
+ [33m⠙[0m Container backend-project              Starting                                                                                                                            [34m5.2s [0m
+ [33m⠙[0m Container frontend-project             Starting                                                                                                                            [34m5.2s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠋[0m Network material-applications_default  Created                                                                                                                             [34m6.0s [0m
+ [33m⠹[0m Container backend-project              Starting                                                                                                                            [34m5.3s [0m
+ [33m⠹[0m Container frontend-project             Starting                                                                                                                            [34m5.3s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠙[0m Network material-applications_default  Created                                                                                                                             [34m6.1s [0m
+ [33m⠸[0m Container backend-project              Starting                                                                                                                            [34m5.4s [0m
+ [33m⠸[0m Container frontend-project             Starting                                                                                                                            [34m5.4s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠹[0m Network material-applications_default  Created                                                                                                                             [34m6.2s [0m
+ [33m⠼[0m Container backend-project              Starting                                                                                                                            [34m5.5s [0m
+ [33m⠼[0m Container frontend-project             Starting                                                                                                                            [34m5.5s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠸[0m Network material-applications_default  Created                                                                                                                             [34m6.3s [0m
+ [33m⠴[0m Container backend-project              Starting                                                                                                                            [34m5.6s [0m
+ [33m⠴[0m Container frontend-project             Starting                                                                                                                            [34m5.6s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠼[0m Network material-applications_default  Created                                                                                                                             [34m6.4s [0m
+ [33m⠦[0m Container backend-project              Starting                                                                                                                            [34m5.7s [0m
+ [33m⠦[0m Container frontend-project             Starting                                                                                                                            [34m5.7s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠴[0m Network material-applications_default  Created                                                                                                                             [34m6.5s [0m
+ [33m⠧[0m Container backend-project              Starting                                                                                                                            [34m5.8s [0m
+ [33m⠧[0m Container frontend-project             Starting                                                                                                                            [34m5.8s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠦[0m Network material-applications_default  Created                                                                                                                             [34m6.6s [0m
+ [33m⠇[0m Container backend-project              Starting                                                                                                                            [34m5.9s [0m
+ [33m⠇[0m Container frontend-project             Starting                                                                                                                            [34m5.9s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠧[0m Network material-applications_default  Created                                                                                                                             [34m6.7s [0m
+ [33m⠏[0m Container backend-project              Starting                                                                                                                            [34m6.0s [0m
+ [33m⠏[0m Container frontend-project             Starting                                                                                                                            [34m6.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠇[0m Network material-applications_default  Created                                                                                                                             [34m6.8s [0m
+ [33m⠋[0m Container backend-project              Starting                                                                                                                            [34m6.1s [0m
+ [33m⠋[0m Container frontend-project             Starting                                                                                                                            [34m6.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠏[0m Network material-applications_default  Created                                                                                                                             [34m6.9s [0m
+ [33m⠙[0m Container backend-project              Starting                                                                                                                            [34m6.2s [0m
+ [33m⠙[0m Container frontend-project             Starting                                                                                                                            [34m6.2s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠋[0m Network material-applications_default  Created                                                                                                                             [34m7.0s [0m
+ [33m⠹[0m Container backend-project              Starting                                                                                                                            [34m6.3s [0m
+ [33m⠹[0m Container frontend-project             Starting                                                                                                                            [34m6.3s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠙[0m Network material-applications_default  Created                                                                                                                             [34m7.1s [0m
+ [33m⠸[0m Container backend-project              Starting                                                                                                                            [34m6.4s [0m
+ [33m⠸[0m Container frontend-project             Starting                                                                                                                            [34m6.4s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 0/3
+ [33m⠹[0m Network material-applications_default  Created                                                                                                                             [34m7.2s [0m
+ [33m⠼[0m Container backend-project              Starting                                                                                                                            [34m6.5s [0m
+ [33m⠼[0m Container frontend-project             Starting                                                                                                                            [34m6.5s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 1/3
+ [33m⠸[0m Network material-applications_default  Created                                                                                                                             [34m7.3s [0m
+ [32m✔[0m Container backend-project              [32mStarted[0m                                                                                                                             [34m6.5s [0m
+ [33m⠴[0m Container frontend-project             Starting                                                                                                                            [34m6.6s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 1/3
+ [33m⠼[0m Network material-applications_default  Created                                                                                                                             [34m7.4s [0m
+ [32m✔[0m Container backend-project              [32mStarted[0m                                                                                                                             [34m6.5s [0m
+ [33m⠦[0m Container frontend-project             Starting                                                                                                                            [34m6.7s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 1/3
+ [33m⠴[0m Network material-applications_default  Created                                                                                                                             [34m7.5s [0m
+ [32m✔[0m Container backend-project              [32mStarted[0m                                                                                                                             [34m6.5s [0m
+ [33m⠧[0m Container frontend-project             Starting                                                                                                                            [34m6.8s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 1/3
+ [33m⠦[0m Network material-applications_default  Created                                                                                                                             [34m7.6s [0m
+ [32m✔[0m Container backend-project              [32mStarted[0m                                                                                                                             [34m6.5s [0m
+ [33m⠇[0m Container frontend-project             Starting                                                                                                                            [34m6.9s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 2/3
+ [33m⠧[0m Network material-applications_default  Created                                                                                                                             [34m7.7s [0m
+ [32m✔[0m Container backend-project              [32mStarted[0m                                                                                                                             [34m6.5s [0m
+ [32m✔[0m Container frontend-project             [32mStarted[0m                                                                                                                             [34m6.9s [0m
+[?25h[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/docs/part2/codes/web_services/material-applications[0m[27m[24m[J[34mweb_services/material-applications[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker container ls -a[27m[22D[27md[27mo[27mc[27mk[27me[27mr[27m [27mc[27mo[27mn[27mt[27ma[27mi[27mn[27me[27mr[27m [27ml[27ms[27m [27m-[27ma[?2004l
+CONTAINER ID   IMAGE                            COMMAND                  CREATED          STATUS         PORTS                    NAMES
+2d50d9e97599   material-applications-backend    "./server"               11 seconds ago   Up 4 seconds   0.0.0.0:8000->8000/tcp   backend-project
+964cc3464329   material-applications-frontend   "docker-entrypoint.s…"   11 seconds ago   Up 4 seconds   0.0.0.0:5000->5000/tcp   frontend-project
+[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/docs/part2/codes/web_services/material-applications[0m[27m[24m[J[34mweb_services/material-applications[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Mon Mar 18 21:22:47 2024
