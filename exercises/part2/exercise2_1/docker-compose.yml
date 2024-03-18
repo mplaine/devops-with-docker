@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  sws:
+    image: devopsdockeruh/simple-web-service:ubuntu
+    container_name: logger
+    volumes:
+      - ./text.log:/usr/src/app/text.log
