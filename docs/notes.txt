@@ -230,3 +230,149 @@ Part 1: DevOps with Docker
   - HEALTHCHECK: Check a container's health on startup.
   - ENTRYPOINT: Specify default executable (cannot be overridden).
   - CMD: Specify default commands (can be overridden).
+
+
+Part 2: DevOps with Docker: docker-compose
+------------------------------------------
+* Docker Compose (https://docs.docker.com/compose/) is designed to simplify running multi-container applications using a single command.
+* Docker Compose file documentation: https://docs.docker.com/compose/compose-file/
+* The value of the key build can be a file system path (in the example it is the current directory .) or an object with keys context and dockerfile. For details, see https://docs.docker.com/compose/compose-file/build/
+* Volumes in Docker Compose are defined with the following syntax location-in-host:location-in-container. Compose can work without an absolute path (host).
+* Give the container a name it will use when running with container_name. The service name can be used to run it:
+  docker compose run yt-dlp-ubuntu https://imgur.com/JY5tHqr
+* Defining environment variables: https://docs.docker.com/compose/environment-variables/set-environment-variables/
+* In addition to starting services listed in docker-compose.yml Docker Compose automatically creates and joins both containers into a network with a DNS. Each service is named after the name given in the docker-compose.yml file. As such, containers can reference each other simply with their service names, which is different from the container name.
+* Docker Compose has already taken care of creating a network and webapp can simply send a request to webapp-helper:3000, the internal DNS will translate that to the correct access and ports do not have to be published outside of the network.
+* Redis (https://redis.io/) is an open-source in-memory storage, used as a distributed, in-memory key–value database, cache and message broker, with optional durability.
+* Redis is quite often used as a cache (https://en.wikipedia.org/wiki/Cache_(computing)) to store data so that future requests for data can be served faster.
+* It is also possible to define the network manually in a Docker Compose file. A major benefit of a manual network definition is that it makes it easy to set up a configuration where containers defined in two different Docker Compose files share a network, and can easily interact with each other.
+* Defining network:
+  version: "3.8"
+  services:
+    db:
+      image: postgres:13.2-alpine
+      networks:
+        - database-network # Name in this Docker Compose file
+  networks:
+    database-network: # Name in this Docker Compose file
+      name: database-network # Name that will be the actual name of the network
+* This defines a network called database-network which is created with docker compose up and removed with docker compose down.
+* Establishing a connection to an external network (that is, a network defined in another docker-compose.yml, or by some other means) is done as follows:
+  version: "3.8"
+  services:
+    db:
+      image: backend-image
+      networks:
+        - database-network
+  networks:
+    database-network:
+      external:
+        name: database-network # Must match the actual name of the network
+* By default all services are added to a network called default. The default network can be configured and this makes it possible to connect to an external network by default as well:
+  version: "3.8"
+  services:
+    db:
+      image: backend-image
+  networks:
+    default:
+      external:
+        name: database-network # Must match the actual name of the network
+* Scale SERVICE to NUM instances. Overrides the scale setting in the Compose file if present.
+  docker compose up --scale whoami=3
+* Use docker compose port to find out which ports the instances are bound to:
+  docker compose port --index 1 whoami 8000  # 0.0.0.0:32769
+* Curl the port:
+  curl 0.0.0.0:32769  # I'm 536e11304357
+* Load balancer: https://en.wikipedia.org/wiki/Load_balancing_(computing)
+* For containerized local environment (or a single server) one good solution is to use https://github.com/jwilder/nginx-proxy
+* We'll mount our docker.sock (https://stackoverflow.com/questions/35110146/can-anyone-explain-docker-sock, the socket that is used to communicate with the Docker Daemon, https://docs.docker.com/engine/reference/commandline/dockerd/) inside of the container in :ro read-only mode:
+  version: "3.8"
+  services:
+    whoami:
+      image: jwilder/whoami
+    proxy:
+      image: jwilder/nginx-proxy
+      volumes:
+        - /var/run/docker.sock:/tmp/docker.sock:ro
+      ports:
+        - 80:80
+* Redmine (https://www.redmine.org/) is a project management application.
+* Adminer (https://www.adminer.org/) is a graphical interface for database administration.
+* Sentry (https://sentry.io/) is an application monitoring tool.
+* restart: always was changed to unless-stopped, that will keep the container running unless we explicitly stop it. With always the stopped container is started after reboot, for example, see here for more.
+  https://docs.docker.com/config/containers/start-containers-automatically/
+* PostgreSQL, where to store data: https://github.com/docker-library/docs/blob/master/postgres/README.md#where-to-store-data
+  - Mount the /var/lib/postgresql/data separately to preserve the data
+* Docker storage options to persist data:
+  - Bind mount (depend on directory structure and OS of the host machine): https://docs.docker.com/storage/bind-mounts/
+  - Volume (managed by Docker): https://docs.docker.com/storage/volumes/
+    - Compose uses the current directory as a prefix for container and volume names so that different projects don't clash (The prefix can be overridden with COMPOSE_PROJECT_NAME environment variable if needed).
+* Inspect a container either using Docker Desktop or CLI:
+  docker container inspect db_redmine | grep -A 5 Mounts
+* Despite us NOT configuring one explicitly, an anonymous volume (randomly named) was automatically created for us.
+* To get rid of unused volumes, you can use docker volume prune.
+* The depends_on (https://docs.docker.com/compose/compose-file/compose-file-v3/#depends_on) declaration. This makes sure that the db service is started first. depends_on does not guarantee that the database is up, just that it is started first.
+* Interact with the database: docker container exec -it db_redmine psql -U postgres
+* Create backups with pg_dump: docker container exec db_redmine pg_dump -U postgres > redmine.dump
+* Adminer actually assumes that the database has DNS name db so with this name selection, we did not have to specify anything. If the database has some other name, we have to pass it to adminer using an environment variable:
+  adminer:
+    environment:
+      - ADMINER_DEFAULT_SERVER=database_server
+* The benefit of a bind mount is that since you know exactly where the data is in your file system, it is easy to create backups. If the Docker managed volumes are used, the location of the data in the file system can not be controlled and that makes backups a bit less trivial...
+* Volume bind mount path is automatically created and can be a relative path. For example:
+  volumes:
+    - ./database:/var/lib/postgresql/data
+* A reverse proxy (e.g., Nginx, https://hub.docker.com/_/nginx) is a type of proxy server that retrieves resources on behalf of a client from one or more servers. These resources are then returned to the client, appearing as if they originated from the reverse proxy server itself.
+  - A single point of entry (e.g., localhost:80 instead of localhost:5000 and localhost:8000)
+* Important note on ports!!! The container port is there within the Docker network accessible by the other containers that are in the same network even if we do not publish anything. So publishing the ports is only for exposing ports outside the Docker network. If no direct access outside the network is not needed, then we just do not publish anything.
+* Port scanner:
+  docker run -it --rm --network host networkstatic/nmap localhost
+* Containers are not only great in production. They can be used in development environments as well and offer several benefits.
+* The principle in all development projects is to have a setup so that a new developer only needs to install Docker and clone the project code from GitHub to get started. Not a single dependency is ever installed on to host machine, Git, Docker and the text editor of choice are the only things that are needed.
+  - For example, say you need MongoDB version 4.0.22 installed in port 5656. It's now an oneliner: "docker run -p 5656:27017 mongo:4.0.22" (MongoDB uses 27017 as the default port).
+* NodeJS (https://nodejs.org/en/) is a cross-platform JavaScript runtime that makes it possible to run JavaScript in your machine, servers and embedded devices, among many other platforms
+  - Libraries are defined in package.json and package-lock.json and installed with npm install. npm (https://www.npmjs.com/) is the Node package manager.
+  - The main/entry file in this case the script is executed with npm start.
+* We can rebuild the whole environment whenever we want with docker compose up --build
+* When I change the line, on my host machine the application instantly notices that files have changed, thanks to volume binding in docker-compose.yml
+* Redirect any request using Express:
+  app.get('*', function (_req, res) {
+    res.redirect('/plus?x=5&y=2')
+  })
+* Docker commands:
+  - Volume:
+    - List all olumes: docker volume ls
+    - Remove unused local volumes: docker volume prune
+* Dockerfile commands (https://docs.docker.com/reference/dockerfile/):
+  - ENV: Set environment variables
+  - VOLUME: Create volume mounts
+* Docker Compose commands:
+  - Build: Build or rebuild services: docker compose build
+  - Down: Stop and remove containers, networks: docker compose down
+  - Port: Print the public port for a port binding: docker compose port [--index 1] <SERVICE> <PRIVATE_PORT>
+  - Push: Push service images: docker compose push
+  - Run: Run a one-off command on a service: docker compose run <SERVICE>
+  - Up: Create and start containers: docker compose up [-d] [--scale <SERVICE>=<NUM_INSTANCES>] [--build]
+* docker-compose.yml commands (https://docs.docker.com/compose/compose-file/):
+  version: '3.8'
+  services
+    <SERVICE>
+      image: <USERNAME>/<REPOSITORY>
+      build: <BUILD_PATH_FOR_IMAGE_ONLY>
+        context: <CONTEXT_PATH>
+        dockerfile: <DOCKERFILE_PATH>
+      volumes:
+        - <HOST_LOCATION>:<CONTAINER_LOCATION>
+      container_name: <CONTAINER_NAME>
+      restart: <STRATEGY>
+      command: ["<COMMAND>"]
+      ports:
+        - <HOST_PORT>:<CONTAINER_PORT>
+      environment:
+        - <VARIABLE>=<VALUE>
+      volumes:
+        - <VOLUME_NAME>:<PATH_TO_STORE_DATA_IN_CONTAINER>
+      depends_on:
+        - <SERVICE>
+    volumes:
+      <VOLUME_NAME>:

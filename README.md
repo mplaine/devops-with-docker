@@ -8,3 +8,9 @@ This repository contains exercise submissions for the *DevOps with Docker* cours
 ### Part 1: DevOps with Docker
 
 My solutions to the Part 1 exercises can be found [here](./exercises/part1/).
+
+The *Interactive Employee Classifier* web application is running online at <https://interactive-employee-classifier.onrender.com/>.
+
+### Part 2: DevOps with Docker: docker-compose
+
+My solutions to the Part 2 exercises can be found [here](./exercises/part2/).
