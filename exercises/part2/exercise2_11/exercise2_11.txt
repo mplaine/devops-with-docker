@@ -1,0 +1,9 @@
+Exercise 2.11
+=============
+
+I modified Dockerfile and added docker-compose.yml to create a fully
+containerized development environment. In addition, I updated Quick Start
+Guide with Docker instructions in README.md.
+
+GitHub PR: https://github.com/mplaine/interactive-employee-classifier/pull/1
+Live app: https://interactive-employee-classifier.onrender.com/
