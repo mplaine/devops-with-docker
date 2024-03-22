@@ -1,0 +1,22 @@
+I modified the two files as follows:
+1) docker-compose.yml
+   frontend:
+     build:
+       context: ./example-frontend/
+       dockerfile: ./Dockerfile
+       args:
+         REACT_APP_BACKEND_URL: /api
+
+2) example-frontend/Dockerfile
+   # Set build-time variables
+   ARG REACT_APP_BACKEND_URL="http://localhost:8000"
+
+   # Set the environment variables
+   ENV REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL}
+
+   # Build the static files
+   RUN npm run build
+
+These changes make it possible to pass a build-time variable (REACT_APP_BACKEND_URL)
+from docker-compose.yml to Dockerfile (frontend) that overrides the default argument
+value used to set the environment variable when building the static files.
