@@ -1,0 +1,222 @@
+Script started on Fri Mar 22 10:15:08 2024
+Restored session: Wed Mar 20 08:18:24 EET 2024
+[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/docs/part2/codes/migrating/material-applications[0m[27m[24m[J[34mmigrating/material-applications[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004hddocker compose up[?2004l
+[1A[1B[0G[?25l[+] Running 0/0
+ [33m⠋[0m Network material-applications_default  Creating                                                                                                                            [34m0.1s [0m
+[?25h[1A[1A[0G[?25l[34m[+] Running 1/1[0m
+ [32m✔[0m Network material-applications_default  [32mCreated[0m                                                                                                                             [34m0.1s [0m
+ [33m⠋[0m Container redis                        Creating                                                                                                                            [34m0.0s [0m
+ [33m⠋[0m Container postgres                     Creating                                                                                                                            [34m0.0s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 1/3
+ [32m✔[0m Network material-applications_default  [32mCreated[0m                                                                                                                             [34m0.1s [0m
+ [33m⠙[0m Container redis                        Creating                                                                                                                            [34m0.1s [0m
+ [33m⠙[0m Container postgres                     Creating                                                                                                                            [34m0.1s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 2/3
+ [32m✔[0m Network material-applications_default  [32mCreated[0m                                                                                                                             [34m0.1s [0m
+ [32m✔[0m Container redis                        [32mCreated[0m                                                                                                                             [34m0.2s [0m
+ [33m⠹[0m Container postgres                     Creating                                                                                                                            [34m0.2s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[+] Running 2/3
+ [32m✔[0m Network material-applications_default  [32mCreated[0m                                                                                                                             [34m0.1s [0m
+ [32m✔[0m Container redis                        [32mCreated[0m                                                                                                                             [34m0.2s [0m
+ [33m⠸[0m Container postgres                     Creating                                                                                                                            [34m0.3s [0m
+[?25h[1A[1A[1A[1A[0G[?25l[34m[+] Running 3/3[0m
+ [32m✔[0m Network material-applications_default  [32mCreated[0m                                                                                                                             [34m0.1s [0m
+ [32m✔[0m Container redis                        [32mCreated[0m                                                                                                                             [34m0.2s [0m
+ [32m✔[0m Container postgres                     [32mCreated[0m                                                                                                                             [34m0.3s [0m
+ [33m⠋[0m Container backend                      Creating                                                                                                                            [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Running 3/4
+ [32m✔[0m Network material-applications_default  [32mCreated[0m                                                                                                                             [34m0.1s [0m
+ [32m✔[0m Container redis                        [32mCreated[0m                                                                                                                             [34m0.2s [0m
+ [32m✔[0m Container postgres                     [32mCreated[0m                                                                                                                             [34m0.3s [0m
+ [33m⠙[0m Container backend                      Creating                                                                                                                            [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 4/4[0m
+ [32m✔[0m Network material-applications_default  [32mCreated[0m                                                                                                                             [34m0.1s [0m
+ [32m✔[0m Container redis                        [32mCreated[0m                                                                                                                             [34m0.2s [0m
+ [32m✔[0m Container postgres                     [32mCreated[0m                                                                                                                             [34m0.3s [0m
+ [32m✔[0m Container backend                      [32mCreated[0m                                                                                                                             [34m0.2s [0m
+ [33m⠋[0m Container frontend                     Creating                                                                                                                            [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Running 4/5
+ [32m✔[0m Network material-applications_default  [32mCreated[0m                                                                                                                             [34m0.1s [0m
+ [32m✔[0m Container redis                        [32mCreated[0m                                                                                                                             [34m0.2s [0m
+ [32m✔[0m Container postgres                     [32mCreated[0m                                                                                                                             [34m0.3s [0m
+ [32m✔[0m Container backend                      [32mCreated[0m                                                                                                                             [34m0.2s [0m
+ [33m⠙[0m Container frontend                     Creating                                                                                                                            [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[34m[+] Running 5/5[0m
+ [32m✔[0m Network material-applications_default  [32mCreated[0m                                                                                                                             [34m0.1s [0m
+ [32m✔[0m Container redis                        [32mCreated[0m                                                                                                                             [34m0.2s [0m
+ [32m✔[0m Container postgres                     [32mCreated[0m                                                                                                                             [34m0.3s [0m
+ [32m✔[0m Container backend                      [32mCreated[0m                                                                                                                             [34m0.2s [0m
+ [32m✔[0m Container frontend                     [32mCreated[0m                                                                                                                             [34m0.2s [0m
+[?25hAttaching to backend, frontend, postgres, redis
+[32mpostgres  | [0mThe files belonging to this database system will be owned by user "postgres".
+[32mpostgres  | [0mThis user must also own the server process.
+[32mpostgres  | [0m
+[32mpostgres  | [0mThe database cluster will be initialized with locale "en_US.utf8".
+[32mpostgres  | [0mThe default database encoding has accordingly been set to "UTF8".
+[32mpostgres  | [0mThe default text search configuration will be set to "english".
+[32mpostgres  | [0m
+[32mpostgres  | [0mData page checksums are disabled.
+[32mpostgres  | [0m
+[32mpostgres  | [0mfixing permissions on existing directory /var/lib/postgresql/data ... ok
+[32mpostgres  | [0mcreating subdirectories ... ok
+[32mpostgres  | [0mselecting dynamic shared memory implementation ... posix
+[32mpostgres  | [0mselecting default max_connections ... 100
+[32mpostgres  | [0mselecting default shared_buffers ... 128MB
+[36mbackend   | [0m[Ex 2.4+] Initializing redis client
+[36mbackend   | [0m[Ex 2.4+] Connection to redis initialized, ready to ping pong.
+[36mbackend   | [0m[Ex 2.6+] Initializing postgres connection with envs
+[36mbackend   | [0m		POSTGRES_HOST      db,
+[36mbackend   | [0m		POSTGRES_USER:     postgres,
+[36mbackend   | [0m		POSTGRES_PASSWORD: example,
+[36mbackend   | [0m		POSTGRES_DATABASE: postgres
+[36mbackend   | [0m		to db:5432
+[36mbackend   | [0m[Ex 2.6+] Connection to postgres failed! Retrying...
+[32mpostgres  | [0mselecting default time zone ... UTC
+[32mpostgres  | [0mcreating configuration files ... ok
+[32mpostgres  | [0mrunning bootstrap script ... ok
+[32mpostgres  | [0msh: locale: not found
+[32mpostgres  | [0m2024-03-22 08:15:23.917 UTC [29] WARNING:  no usable system locales were found
+[36mbackend   | [0m[Ex 2.6+] Connection to postgres failed! Retrying...
+[33mfrontend  | [0m INFO  Accepting connections at http://localhost:5000
+[32mpostgres  | [0mperforming post-bootstrap initialization ... ok
+[32mpostgres  | [0minitdb: warning: enabling "trust" authentication for local connections
+[32mpostgres  | [0mYou can change this by editing pg_hba.conf or using the option -A, or
+[32mpostgres  | [0m--auth-local and --auth-host, the next time you run initdb.
+[32mpostgres  | [0msyncing data to disk ... ok
+[32mpostgres  | [0m
+[32mpostgres  | [0m
+[32mpostgres  | [0mSuccess. You can now start the database server using:
+[32mpostgres  | [0m
+[32mpostgres  | [0m    pg_ctl -D /var/lib/postgresql/data -l logfile start
+[32mpostgres  | [0m
+[32mpostgres  | [0mwaiting for server to start....2024-03-22 08:15:27.376 UTC [34] LOG:  starting PostgreSQL 13.2 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.2.1_pre1) 10.2.1 20201203, 64-bit
+[32mpostgres  | [0m2024-03-22 08:15:27.382 UTC [34] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[32mpostgres  | [0m2024-03-22 08:15:27.406 UTC [35] LOG:  database system was shut down at 2024-03-22 08:15:26 UTC
+[32mpostgres  | [0m2024-03-22 08:15:27.424 UTC [34] LOG:  database system is ready to accept connections
+[32mpostgres  | [0m done
+[32mpostgres  | [0mserver started
+[32mpostgres  | [0m
+[32mpostgres  | [0m/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+[32mpostgres  | [0m
+[32mpostgres  | [0mwaiting for server to shut down....2024-03-22 08:15:27.598 UTC [34] LOG:  received fast shutdown request
+[32mpostgres  | [0m2024-03-22 08:15:27.611 UTC [34] LOG:  aborting any active transactions
+[32mpostgres  | [0m2024-03-22 08:15:27.613 UTC [34] LOG:  background worker "logical replication launcher" (PID 41) exited with exit code 1
+[32mpostgres  | [0m2024-03-22 08:15:27.615 UTC [36] LOG:  shutting down
+[32mpostgres  | [0m2024-03-22 08:15:27.647 UTC [34] LOG:  database system is shut down
+[32mpostgres  | [0m done
+[32mpostgres  | [0mserver stopped
+[32mpostgres  | [0m
+[32mpostgres  | [0mPostgreSQL init process complete; ready for start up.
+[32mpostgres  | [0m
+[32mpostgres  | [0m2024-03-22 08:15:27.773 UTC [1] LOG:  starting PostgreSQL 13.2 on x86_64-pc-linux-musl, compiled by gcc (Alpine 10.2.1_pre1) 10.2.1 20201203, 64-bit
+[32mpostgres  | [0m2024-03-22 08:15:27.773 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[32mpostgres  | [0m2024-03-22 08:15:27.773 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[32mpostgres  | [0m2024-03-22 08:15:27.783 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[32mpostgres  | [0m2024-03-22 08:15:27.811 UTC [46] LOG:  database system was shut down at 2024-03-22 08:15:27 UTC
+[32mpostgres  | [0m2024-03-22 08:15:27.823 UTC [1] LOG:  database system is ready to accept connections
+[36mbackend   | [0m[Ex 2.6+] Connection to postgres initialized, ready to ping pong.
+[36mbackend   | [0m[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+[36mbackend   | [0m
+[36mbackend   | [0m[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+[36mbackend   | [0m - using env:	export GIN_MODE=release
+[36mbackend   | [0m - using code:	gin.SetMode(gin.ReleaseMode)
+[36mbackend   | [0m
+[36mbackend   | [0m[GIN-debug] GET    /ping                     --> server/router.pingpong (4 handlers)
+[36mbackend   | [0m[GIN-debug] GET    /messages                 --> server/controller.GetMessages (4 handlers)
+[36mbackend   | [0m[GIN-debug] POST   /messages                 --> server/controller.CreateMessage (4 handlers)
+[36mbackend   | [0m[GIN-debug] Listening and serving HTTP on :8000
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 GET /
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 Returned 200 in 57 ms
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 GET /static/css/main.eaa5d75e.chunk.css
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 GET /static/js/2.43ca3586.chunk.js
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 GET /static/js/main.8f5ced62.chunk.js
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 Returned 200 in 32 ms
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 Returned 200 in 25 ms
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 Returned 200 in 38 ms
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 GET /static/media/toskalogo.c0f35cf0.svg
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 Returned 200 in 12 ms
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 GET /favicon.ico
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 GET /manifest.json
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 Returned 200 in 23 ms
+[33mfrontend  | [0m HTTP  3/22/2024 8:15:35 AM 192.168.65.1 Returned 304 in 13 ms
+[36mbackend   | [0m[GIN] 2024/03/22 - 08:15:37 | 200 |      93.655µs |    192.168.65.1 | GET      "/ping"
+[36mbackend   | [0mping pong
+[36mbackend   | [0m[GIN] 2024/03/22 - 08:15:38 | 200 |     663.647µs |    192.168.65.1 | GET      "/ping?redis=true"
+[36mbackend   | [0m&{1 pong}
+[36mbackend   | [0m[GIN] 2024/03/22 - 08:15:39 | 200 |    4.609238ms |    192.168.65.1 | GET      "/ping?postgres=true"
+[36mbackend   | [0m[GIN] 2024/03/22 - 08:15:41 | 200 |    2.077089ms |    192.168.65.1 | GET      "/messages"
+[36mbackend   | [0m[GIN] 2024/03/22 - 08:15:48 | 200 |    5.671941ms |    192.168.65.1 | POST     "/messages"
+[36mbackend   | [0m[GIN] 2024/03/22 - 08:15:48 | 200 |    1.108512ms |    192.168.65.1 | GET      "/messages"
+[36mbackend   | [0m[GIN] 2024/03/22 - 08:15:51 | 200 |    2.021997ms |    192.168.65.1 | GET      "/messages"
+^CGracefully stopping... (press Ctrl+C again to force)
+[1A[1B[0G[?25l[+] Stopping 0/0
+ [33m⠋[0m Container frontend  Stopping                                                                                                                                               [34m0.1s [0m
+[?25h[1A[1A[0G[?25l[+] Stopping 0/1
+ [33m⠙[0m Container frontend  Stopping                                                                                                                                               [34m0.2s [0m
+[?25h[1A[1A[0G[?25l[34m[+] Stopping 1/1[0m
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [33m⠋[0m Container backend   Stopping                                                                                                                                               [34m0.0s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Stopping 1/2
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [33m⠙[0m Container backend   Stopping                                                                                                                                               [34m0.1s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Stopping 1/2
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [33m⠹[0m Container backend   Stopping                                                                                                                                               [34m0.2s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Stopping 1/2
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [33m⠸[0m Container backend   Stopping                                                                                                                                               [34m0.3s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Stopping 1/2
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [33m⠼[0m Container backend   Stopping                                                                                                                                               [34m0.4s [0m
+[?25h[1A[1A[1A[0G[?25l[+] Stopping 1/2
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [33m⠴[0m Container backend   Stopping                                                                                                                                               [34m0.5s [0m
+[?25h[1A[1A[1A[0G[?25l[34m[+] Stopping 2/2[0m
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [32m✔[0m Container backend   [32mStopped[0m                                                                                                                                                [34m0.6s [0m
+ [33m⠋[0m Container redis     Stopping                                                                                                                                               [34m0.0s [0m
+ [33m⠋[0m Container postgres  Stopping                                                                                                                                               [34m0.0s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Stopping 2/4
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [32m✔[0m Container backend   [32mStopped[0m                                                                                                                                                [34m0.6s [0m
+ [33m⠙[0m Container redis     Stopping                                                                                                                                               [34m0.1s [0m
+ [33m⠙[0m Container postgres  Stopping                                                                                                                                               [34m0.1s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Stopping 2/4
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [32m✔[0m Container backend   [32mStopped[0m                                                                                                                                                [34m0.6s [0m
+ [33m⠹[0m Container redis     Stopping                                                                                                                                               [34m0.2s [0m
+ [33m⠹[0m Container postgres  Stopping                                                                                                                                               [34m0.2s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Stopping 2/4
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [32m✔[0m Container backend   [32mStopped[0m                                                                                                                                                [34m0.6s [0m
+ [33m⠸[0m Container redis     Stopping                                                                                                                                               [34m0.3s [0m
+ [33m⠸[0m Container postgres  Stopping                                                                                                                                               [34m0.3s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Stopping 2/4
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [32m✔[0m Container backend   [32mStopped[0m                                                                                                                                                [34m0.6s [0m
+ [33m⠼[0m Container redis     Stopping                                                                                                                                               [34m0.4s [0m
+ [33m⠼[0m Container postgres  Stopping                                                                                                                                               [34m0.4s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Stopping 3/4
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [32m✔[0m Container backend   [32mStopped[0m                                                                                                                                                [34m0.6s [0m
+ [32m✔[0m Container redis     [32mStopped[0m                                                                                                                                                [34m0.5s [0m
+ [33m⠴[0m Container postgres  Stopping                                                                                                                                               [34m0.5s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Stopping 3/4
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [32m✔[0m Container backend   [32mStopped[0m                                                                                                                                                [34m0.6s [0m
+ [32m✔[0m Container redis     [32mStopped[0m                                                                                                                                                [34m0.5s [0m
+ [33m⠦[0m Container postgres  Stopping                                                                                                                                               [34m0.6s [0m
+[?25h[1A[1A[1A[1A[1A[0G[?25l[34m[+] Stopping 4/4[0m
+ [32m✔[0m Container frontend  [32mStopped[0m                                                                                                                                                [34m0.3s [0m
+ [32m✔[0m Container backend   [32mStopped[0m                                                                                                                                                [34m0.6s [0m
+ [32m✔[0m Container redis     [32mStopped[0m                                                                                                                                                [34m0.5s [0m
+ [32m✔[0m Container postgres  [32mStopped[0m                                                                                                                                                [34m0.7s [0m
+[?25hcanceled
+[1m[7m%[27m[1m[0m                                                                                                                                                                                   ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/docs/part2/codes/migrating/material-applications[0m[27m[24m[J[34mmigrating/material-applications[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...none found.
+
+Script done on Fri Mar 22 10:15:59 2024
