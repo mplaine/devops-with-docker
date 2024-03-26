@@ -1,0 +1,230 @@
+Script started on Tue Mar 26 17:17:59 2024
+Restored session: Tue Mar 26 17:16:03 EET 2024
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part3/exercise3_4[0m[27m[24m[J[34mpart3/exercise3_4[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker build -t builder .[27m[25D[27md[27mo[27mc[27mk[27me[27mr[27m [27mb[27mu[27mi[27ml[27md[27m [27m-[27mt[27m [27mb[27mu[27mi[27ml[27md[27me[27mr[27m [27m.[?2004l
+[1A[1B[0G[?25l[+] Building 0.0s (0/0)  docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.0s (0/1)                                                                                                                                      docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.2s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             0.2s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.3s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             0.3s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.5s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             0.5s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.6s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             0.6s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.8s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             0.8s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.9s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             0.9s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 1.1s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             1.1s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 1.2s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             1.2s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 1.4s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             1.4s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 1.6s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             1.5s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 1.7s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             1.7s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 1.8s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             1.8s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 2.0s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             2.0s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 2.1s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             2.1s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 2.3s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             2.3s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 2.4s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             2.4s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 2.6s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             2.6s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 2.7s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             2.7s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 2.9s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             2.9s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 3.0s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             3.0s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 3.2s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             3.2s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 3.3s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             3.3s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 3.5s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             3.5s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 3.6s (1/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             3.6s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 3.7s (2/2)                                                                                                                                      docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m[34m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             3.7s
+[0m[?25h[1A[1A[1A[1A[0G[?25l[+] Building 3.8s (9/9) FINISHED                                                                                                                             docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                                                                         0.0s
+[0m[34m => => transferring dockerfile: 249B                                                                                                                                         0.0s
+[0m[34m => [internal] load metadata for docker.io/library/docker:latest                                                                                                             3.7s
+[0m[34m => [internal] load .dockerignore                                                                                                                                            0.0s
+[0m[34m => => transferring context: 2B                                                                                                                                              0.0s
+[0m[34m => [1/4] FROM docker.io/library/docker:latest@sha256:016c45d9e31461802186e8e9aaa394f35e173a8ce913ea7195a672cdc97102f2                                                       0.0s
+[0m[34m => [internal] load build context                                                                                                                                            0.0s
+[0m[34m => => transferring context: 32B                                                                                                                                             0.0s
+[0m[34m => CACHED [2/4] WORKDIR /usr/src/app                                                                                                                                        0.0s
+[0m[34m => CACHED [3/4] COPY builder.sh .                                                                                                                                           0.0s
+[0m[34m => CACHED [4/4] RUN chmod +x builder.sh                                                                                                                                     0.0s
+[0m[34m => exporting to image                                                                                                                                                       0.0s
+[0m[34m => => exporting layers                                                                                                                                                      0.0s
+[0m[34m => => writing image sha256:7070fb3475f13a253ccfe5a44df278d2cba8187954cb6259e43810b857ab63aa                                                                                 0.0s
+[0m[34m => => naming to docker.io/library/builder                                                                                                                                   0.0s
+[0m[?25h[1m
+What's Next?
+[0m  View a summary of image vulnerabilities and recommendations → [36mdocker scout quickview[0m
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part3/exercise3_4[0m[27m[24m[J[34mpart3/exercise3_4[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004h[7mdocker run -e DOCKER_USER=mplaine -e DOCKER_PWD=$DOCKER_PWD -v /var/run/docker.sock:/var/run/docker.sock builder mplaine/express-app mplai[7mn[7me/express-app[27m[K[A[26C[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27me[27m [27mD[27mO[27mC[27mK[27mE[27mR[27m_[27mU[27mS[27mE[27mR[27m=[27mm[27mp[27ml[27ma[27mi[27mn[27me[27m [27m-[27me[27m [27mD[27mO[27mC[27mK[27mE[27mR[27m_[27mP[27mW[27mD[27m=[27m$[27mD[27mO[27mC[27mK[27mE[27mR[27m_[27mP[27mW[27mD[27m [27m-[27mv[27m [27m/[27mv[27ma[27mr[27m/[27mr[27mu[27mn[27m/[27md[27mo[27mc[27mk[27me[27mr[27m.[27ms[27mo[27mc[27mk[27m:[27m/[27mv[27ma[27mr[27m/[27mr[27mu[27mn[27m/[27md[27mo[27mc[27mk[27me[27mr[27m.[27ms[27mo[27mc[27mk[27m [27mb[27mu[27mi[27ml[27md[27me[27mr[27m [27mm[27mp[27ml[27ma[27mi[27mn[27me[27m/[27me[27mx[27mp[27mr[27me[27ms[27ms[27m-[27ma[27mp[27mp[27m [27mm[27mp[27ml[27ma[27min[27me[27m/[27me[27mx[27mp[27mr[27me[27ms[27ms[27m-[27ma[27mp[27mp[?2004l
+Step 1: Checking arguments...
+GitHub repository: mplaine/express-app
+GitHub repository URL: https://github.com/mplaine/express-app.git
+Docker Hub repository: mplaine/express-app
+Step 2: Downloading the repository from GitHub...
+Cloning into 'app-temp'...
+Step 3: Logging in to Docker Hub...
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+Step 4: Building the Docker image...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 95B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:16
+#2 ...
+
+#3 [auth] library/node:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:16
+#2 DONE 2.2s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 92.12kB 0.0s done
+#5 DONE 0.1s
+
+#6 [1/3] FROM docker.io/library/node:16@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b
+#6 CACHED
+
+#7 [2/3] COPY . .
+#7 DONE 0.0s
+
+#8 [3/3] RUN npm install
+#8 6.937 
+#8 6.937 added 57 packages, and audited 58 packages in 6s
+#8 6.937 
+#8 6.937 7 packages are looking for funding
+#8 6.937   run `npm fund` for details
+#8 6.946 
+#8 6.946 1 moderate severity vulnerability
+#8 6.946 
+#8 6.946 To address all issues, run:
+#8 6.946   npm audit fix
+#8 6.946 
+#8 6.946 Run `npm audit` for details.
+#8 6.947 npm notice 
+#8 6.947 npm notice New major version of npm available! 8.19.4 -> 10.5.0
+#8 6.947 npm notice Changelog: <https://github.com/npm/cli/releases/tag/v10.5.0>
+#8 6.947 npm notice Run `npm install -g npm@10.5.0` to update!
+#8 6.948 npm notice 
+#8 DONE 7.0s
+
+#9 exporting to image
+#9 exporting layers 0.1s done
+#9 writing image sha256:3faef73cea2f9f86558c45eb0869afb2b64f9839491b75d45fa706399ecb8745
+#9 writing image sha256:3faef73cea2f9f86558c45eb0869afb2b64f9839491b75d45fa706399ecb8745 done
+#9 naming to docker.io/mplaine/express-app done
+#9 DONE 0.1s
+Step 5: Uploading the Docker image to Docker Hub...
+Using default tag: latest
+The push refers to repository [docker.io/mplaine/express-app]
+49c29eb8a01c: Preparing
+fae7c9fcaa32: Preparing
+be322b479aee: Preparing
+d41bcd3a037b: Preparing
+fe0d845e767b: Preparing
+f25ec1d93a58: Preparing
+794ce8b1b516: Preparing
+3220beed9b06: Preparing
+684f82921421: Preparing
+9af5f53e8f62: Preparing
+f25ec1d93a58: Waiting
+794ce8b1b516: Waiting
+3220beed9b06: Waiting
+684f82921421: Waiting
+9af5f53e8f62: Waiting
+be322b479aee: Layer already exists
+d41bcd3a037b: Layer already exists
+fe0d845e767b: Layer already exists
+3220beed9b06: Layer already exists
+f25ec1d93a58: Layer already exists
+794ce8b1b516: Layer already exists
+9af5f53e8f62: Layer already exists
+49c29eb8a01c: Pushed
+fae7c9fcaa32: Pushed
+684f82921421: Pushed
+latest: digest: sha256:2a906182228cdc9280bb5f128f3dc3f706f50f874700e12a416a530873da7462 size: 2424
+Step 6: Deleting the downloaded repository...
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part3/exercise3_4[0m[27m[24m[J[34mpart3/exercise3_4[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Tue Mar 26 17:19:48 2024
