@@ -1,0 +1,16 @@
+Script started on Wed Mar 27 17:11:43 2024
+Restored session: Tue Mar 26 17:19:48 EET 2024
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part3/exercise3_6[0m[27m[24m[J[34mpart3/exercise3_6[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004hddocker image ls[?2004l
+REPOSITORY    TAG       IMAGE ID       CREATED          SIZE
+frontend_v2   latest    01db952288f6   2 minutes ago    1.27GB
+backend_v2    latest    e75323f3aef9   11 minutes ago   1.07GB
+frontend_v1   latest    ab66c600bd1e   24 hours ago     1.27GB
+backend_v1    latest    ff032f355468   24 hours ago     1.07GB
+[1m[7m%[27m[1m[0m                                                                                                                                                                                  ]7;file://Markkus-MBP/Users/markku/Codes/GitHub/devops-with-docker/exercises/part3/exercise3_6[0m[27m[24m[J[34mpart3/exercise3_6[39m [31mdocker-desktop[39m [33mmain[39m % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...       5 completed.
+
+Script done on Wed Mar 27 17:11:58 2024
