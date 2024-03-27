@@ -1,0 +1,27 @@
+FROM golang:1.16.15-alpine3.15
+
+# Change the working directory
+WORKDIR /usr/src/app
+
+# Copy all of the source code
+COPY . .
+
+# Set the environment variables
+ENV PORT=8000
+ENV REQUEST_ORIGIN="http://localhost:5000"
+
+# 1. Build the project
+# 2. Create the appuser with home directory
+# 3. Remove apt source lists
+RUN go build && \
+    adduser -D appuser && \
+    rm -rf /var/lib/apt/lists/*
+
+# Switch to the appuser
+USER appuser
+
+# Expose port 8000
+EXPOSE 8000
+
+# Run the project
+CMD ["./server"]
