@@ -14,3 +14,7 @@ The *Interactive Employee Classifier* web application is running online at <http
 ### Part 2: DevOps with Docker: docker-compose
 
 My solutions to the Part 2 exercises can be found [here](./exercises/part2/).
+
+### Part 3: DevOps with Docker: security and optimization
+
+My solutions to the Part 3 exercises can be found [here](./exercises/part3/).
