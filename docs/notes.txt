@@ -376,3 +376,226 @@ Part 2: DevOps with Docker: docker-compose
         - <SERVICE>
     volumes:
       <VOLUME_NAME>:
+
+
+Part 3: DevOps with Docker: security and optimization
+-----------------------------------------------------
+* The Alpine Linux image is much smaller than Ubuntu.
+* Running the applications as root, i.e. the super user is potentially dangerous.
+* The official images repository (https://github.com/docker-library/official-images) contains a library of images considered official. They are introduced into the library by regular pull request processes. The extended process for verifying an image is described in the repository README.
+* For the Ubuntu image automation from the launchpad takes care of creating the PRs to docker-library and the maintainers of the official images repository verify the PRs.
+* We have learned that the build processes are open and we can verify it if we have the need.
+* CI/CD (https://en.wikipedia.org/wiki/CI/CD) automates much or all of the manual human intervention traditionally needed to get new code from a commit into production. With a CI/CD pipeline, development teams can make changes to code that are then automatically tested and pushed out for delivery and deployment. Get CI/CD right and downtime is minimized and code releases happen faster.
+* Use GitHub Actions (https://github.com/features/actions) to build an image and push the image to Docker Hub, and then use a project called Watchtower (https://containrrr.dev/watchtower/) to automatically pull and restart the new image in the target machine.
+* GitHub Actions (https://github.com/features/actions) is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test commit and every pull request to your repository, or deploy merged pull requests to production.
+* GitHub Actions
+  - workflows: https://docs.github.com/en/actions/using-workflows
+  - jobs: https://docs.github.com/en/actions/using-jobs/using-jobs-in-a-workflow
+  - steps: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsteps
+  - secrets: https://docs.github.com/en/actions/security-guides/encrypted-secrets
+    GitHub > Settings > Secrets and variables > Secrets
+* The DOCKERHUB_TOKEN can be created in Docker Hub from MY Account > Security > New Access Token.
+* GitHub Actions: workflows > jobs > steps
+* Each step is a small operation or action that does its part of the whole.
+  1. Check out the code from the repository
+  2. Log in to Docker Hub
+  3. Build the image and push it to Docker Hub
+* Docker GitHub Actions: https://github.com/marketplace/actions/build-and-push-docker-images
+* Watchtower (https://github.com/containrrr/watchtower) is an open-source project that automates the task of updating images.
+  - For development environments (not for production)
+* Watchtower will pull the source of the image (in this case Docker Hub) for changes in the containers that are running. The container that is running will be updated and automatically restarted when a new version of the image is pushed to Docker Hub. Watchtower respects tags e.g. q container using ubuntu:22.04 will not be updated unless a new version of ubuntu:22.04 is released.
+* Note that now anyone with access to your Docker Hub also has access to your PC through this. If they push a malicious update to your application, Watchtower will happily download and start the updated version.
+* Example Dockerfile using Watchtower:
+  version: "3.8"
+  services:
+    watchtower:
+      image: containrrr/watchtower
+      environment:
+        -  WATCHTOWER_POLL_INTERVAL=60 # Poll every 60 seconds
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+      container_name: watchtower
+* One needs to be careful when starting Watchtower with docker compose up, since it will try to update every image running the machine. The documentation (https://containrrr.github.io/watchtower/) describes how this can be prevented.
+* Deployment pipeline:
+  1. Checkout code from repository
+  2. Build and push image to Docker Hub
+  3. Trigger Render deployment
+* Shell scripting tutorial: https://www.shellscript.sh/
+* The Watchtower uses a volume to docker.sock socket to access the Docker daemon of the host from the container:
+  services:
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    # ...
+* In practice this means that Watchtower can run commands on Docker the same way we can "command" Docker from the cli with docker ps, docker run etc.
+* If we mount the docker.sock socket to a container, we can use the command docker inside the container, just like we are using it in the host terminal!
+* Check which Docker registry you are currently logged in on your system:
+  cat ~/.docker/config.json
+* Log out from a Docker registry or cloud backend:
+  docker logout [SERVER]
+  docker logout [command]
+* The application could, in theory, escape the container due to a bug in Docker or Linux kernel. To mitigate this security issue we will add a non-root user to our container and run our process with that user. Another option would be to map the root user to a high, non-existing user id on the host with https://docs.docker.com/engine/security/userns-remap/, and can be used in case you must use root within the container.
+* Change the user with the directive USER - so all commands after this line will be executed as our new user, including the CMD and ENTRYPOINT.
+* Add an user called appuser with the following command:
+  RUN useradd -m appuser
+* We'll see that our appuser user has no access to write to the container filesystem. This can be fixed with chown or not fix it at all, if the intented usage is to always have a /mydir mounted from the host. By mounting the directory the application works as intended.
+* If we want to give the appuser permission to write inside the container, the permission change must be done when we are still executing as root, that is, before the directive USER is used to change the user:
+  RUN useradd -m appuser  # create the appuser
+  RUN chown appuser .     # change the owner of current dir to appuser
+  USER appuser            # now we can change the user
+* Security issues with the user being a root are serious for the example frontend and backend as the containers for web services are supposed to be accessible through the Internet.
+* A small image size has many advantages, firstly, it takes much less time to pull a small image from the registry. Another thing is the security: the bigger your image is the larger the surface area for an attack it has.
+* To build your own image, you create a Dockerfile with a simple syntax for defining the steps needed to create the image and run it. Each instruction in a Dockerfile creates a layer in the image. When you change the Dockerfile and rebuild the image, only those layers which have changed are rebuilt. This is part of what makes images so lightweight, small, and fast, when compared to other virtualization.
+* Each command that is executed to the base image, forms a layer. The resulting image is the final layer, which combines the changes that all the intermediate layers contain. Each layer potentially adds something extra to the resulting image so it might be a good idea to minimize the number of layers.
+* Methods to reduce container image size:
+  1. Small base image
+     - alpine
+  2. Builder pattern
+     - code -> build container (compiler, dev deps, unit tests, etc.) -> build artifact(s) (binaries, static files, bundles, transpiled code) -> runtime container (runtime env, debug/monitor, tooling)
+* Advantages of small containers:
+  1. Performance (time to build, push, and pull a container -> faster use in development or production)
+  2. Security (less software included means less vulnerabilities)
+* We could glue all RUN commands together to reduce the number of layers that are created when building the image.
+* With docker image history we can see the size of each layer.
+* Finally, remove everything that is not needed in the final image.
+  - curl and its dependencies:
+    RUN apt-get purge -y --auto-remove curl
+  - apt source lists:
+    RUN rm -rf /var/lib/apt/lists/*
+* Alpine Linux (https://www.alpinelinux.org/) provides a popular alternative base in https://hub.docker.com/_/alpine/ for Ubuntu that is around 8 megabytes. It's based on alternative glibc implementation musl (https://musl.libc.org/) and busybox (https://www.busybox.net/) binaries, so not all software runs well (or at all) with it.
+  - The package manager is apk and it can work without downloading sources (caches) first with --no-cache.
+    apk add --no-cache curl python3 ca-certificates
+  - For creating user the command useradd is missing, but adduser can be used instead.
+    adduser -D appuser
+  - Most of the package names are the same - there's a good package browser at https://pkgs.alpinelinux.org/packages
+  - Possible issues with running software depending on glib -> check tha teverything works as expected
+* Alpine uses musl libc (https://musl.libc.org/) instead of glibc and friends (https://www.etalabs.net/compare_libcs.html), so software will often run into issues depending on the depth of their libc requirements/assumptions.
+  - For pros/cons, see https://news.ycombinator.com/item?id=10782897
+  - Alpine reference: https://hub.docker.com/_/alpine/
+* In general, installing the environment that is required to build and run a program inside a container can be quite a burden.
+* Luckily, there are preinstalled images for many programming languages readily available on DockerHub, and instead of relying upon "manual" installation steps in a Dockerfile, it's quite often a good idea to use a pre-installed image.
+* We can publish whatever tag variants we want:
+  docker image tag yt-dlp:alpine-3.19 mplaine/yt-dlp:alpine-3.19
+  docker image push mplaine/yt-dlp:alpine-3.19
+  docker image tag yt-dlp:python-alpine mplaine/yt-dlp:python-alpine
+  docker image push mplaine/yt-dlp:python-alpine
+  docker image tag yt-dlp:python-alpine mplaine/yt-dlp  # latest
+  docker image push mplaine/yt-dlp  # latest
+* It's important to keep in mind that if not specified, the tag :latest simply refers to the most recent image that has been built and pushed, which can potentially contain any updates or changes.
+* There are some differences between these types of Docker images:
+  - Standard Docker Image: These images are typically based on a full Linux distribution like Ubuntu or Debian and include a wide range of pre-installed packages and dependencies. They tend to be larger in size than other types of images.
+  - Alpine Linux Docker Image: Alpine Linux is a lightweight Linux distribution that is designed to be small and secure. Alpine-based Docker images are typically much smaller than standard images, as they include only the bare essentials needed to run the application.
+  - Slim Docker Image: These images are similar to Alpine-based images in that they are designed to be small and efficient. However, they are not necessarily based on Alpine Linux and can use other lightweight Linux distributions like CentOS or Debian. Slim images typically include only the necessary packages and dependencies to run the application, but may still be larger than Alpine-based images.
+* Use rm -rf /var/lib/apt/lists/* to reduce the size of the Docker image by removing unnecessary cached package lists after installing packages.
+* Multi-stage builds are useful when you need some tools just for the build but not for the execution of the image (that is for CMD or ENTRYPOINT). This is an easy way to reduce size in some cases.
+* Note the naming from Ruby to build-stage. We could also use an external image as a stage, --from=python:3.12 for example.
+  FROM ruby:3 as build-stage
+* As you can see, even though our Jekyll image needed Ruby during the build stage, it is considerably smaller since it only has Nginx and the static files in the resulting image.
+* Often the best choice is to use a FROM scratch image as it doesn't have anything we don't explicitly add there, making it the most secure option over time.
+* With (built) binary files, use FROM scratch to minimize Docker image size
+* Best practices when building minimized Docker images:
+  - Use Linux Alpine in builder stage
+  - Use multi-staging (e.g., builder and server stages)
+  - Build binary files using static linking for C libraries
+  - Remove apt source lists when no longer needed
+  - Use FROM scratch with binary files
+  - Run the container using a non-root user
+* 8 Best Practices for using Docker in Production (https://www.youtube.com/watch?v=8vXoMqWgbQQ) to improve security and optimize Docker image size:
+  1. Use official Docker images as base image
+     + Cleaner Dockerfile
+     + Official Docker image
+     + Verified and already build qith best practices
+     + e.g. FROM node (not FROM ubuntu)
+     - Do not use base operating system image and install packages yourself
+  2. Use specific Docker image versions
+     + Fixate the version
+     + The more specific, the better
+     + e.g. FROM node:17.0.1 (not FROM node)
+     * It will use the latest tag
+     * FROM node == FROM node:latest
+     - You might get different docker image versions
+     - Might break stuff
+     - Latest tag is unpredictable
+     - Do not use a random latest tag
+  3. Use small-sized official images
+     + Less storage space 
+     + Transfer images faster
+     + Minimize attach surface
+     + Only bundle necessary utilities (e.g., Busybox instead of GNU Core Utils)
+     + Use image based on a leaner and smaller OS distro
+     + e.g. FROM node:17.0.1-alpine (not FROM node:17.0.1)
+     * Linux Alpine is lightweight Linux distro, security-oriented, popular base image
+     * If you don't require any specific utilities, choose leaner and smaller image
+     - Full-blown operating system distros have larger image size due to packaged in system utilities
+     - Many OS features your image will never use
+     - More security vulnerabilities
+     - Introduce unnecessary security issues from the beginning
+     - Could ne based on full-blown OS
+  4. Optimize caching image layers
+     + Faster image building
+     + Downloading only added layers
+     + Order Dockerfile commands from least to most frequently changing (e.g., FROM, WORKDIR, COPY package.json, RUN install, COPY sources, CMD)
+     + Take advantage of caching
+     + Faster image building and fetching
+     * Docker images are built based on a Dockerfile
+     * Each command creates an image layer
+     * Show Docker image layers: docker image history myapp:1.0
+     * Docker caches each layer, saved on local filesystem
+     * If nothing has changed in a layer (or any layers preceding it), it will be re-used from cache
+     * Once a layer changes, all following layers are re-created as well
+  5. Use .dockerignore file
+     + Use .dockerignore to explicitly exclude files and folders (.git, .cache, *.md, .env)
+     + Reduce image sized
+     + Prevent unintended secrets exposure
+     * We don't need everything inside the Docker image (auto-generated folders (like target, build), README files)
+     * Create .dockerignore file in the root directory
+     * List files and folders you want to ignore
+     * Matching is done using Go's filepath.Match rules
+  6. Make use of multi-stage builds
+     + Leave everything behind you don't want in the final image
+     * Build stage, runtime stage
+     * You can name your stages with AS <NAME>
+     * Each FROM instruction starts a new build stage
+     * You can selectively copy artifacts from one stage to another
+     - Test dependencies, temporary files, development tools, build tools, dependencies files (needed for installing dependencies, not for running the app) all increase image size and attack surface
+  7. Use the least privileged user
+     + Create a dedicated user and group
+       RUN groupadd -r tom && useradd -g tom tom
+     + Don't forget to set required permissions
+       RUN chown -R tom:tom /app
+     + Change to non-root user with USER directive
+       USER tom
+     * By default, Docker uses the root user
+     * Few use cases, where the container needs to run as root
+     * Some base images have a generic user bundled in (no need to create one yourself)
+       RUN chown -R node:node /app
+       USER node
+     - Security bad practice
+     - Container could potentially have root access on the Docker host
+     - Easier privilege escalation for an attacker
+  8. Scan your images for security vulnerabilities
+     * docker scout cves myapp:1.0  (requires docker login)
+     * Docker uses Snyk service (constantly updated database) for the vulnerability scan
+     * Snyk shows the version of a library that fixes the vulnerability
+     * Configure Docker Hub to automatically scan pushed images AND/OR integrate into your CI/CD pipeline
+* In situations where we have more than a single host machine we cannot rely solely on Docker. However, Docker does contain other tools to help us with automatic deployment, scaling and management of dockerized applications.
+* Docker swarm (https://docs.docker.com/engine/swarm/) mode is built into Docker. It turns a pool of Docker hosts into a single virtual host.
+* Kubernetes (https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) is the de facto way of orchestrating your containers in large multi-host environments. The reason being it's customizability, large community and robust features. However, the drawback is the higher learning curve compared to Docker swarm mode.
+* Lightweight Kubernetes: https://k3s.io/
+* Rather than maintaining one (Kubernetes cluster) yourself the most common way to use Kubernetes is by using a managed service by a cloud provider. Such as Google Kubernetes Engine (GKE) or Amazon Elastic Kubernetes Service (Amazon EKS) which are both offering some credits to get started.
+* Kubernetes glossary: https://kubernetes.io/docs/reference/glossary/?fundamental=true
+* Example Kubernetes diagrams: https://tsuyoshiushio.medium.com/kubernetes-in-three-diagrams-6aba8432541c
+* Docker commands:
+  - Image:
+    - Show the history of an image: docker image history <IMAGE>
+    - Show digests: docker image ls --digests
+    - Show the history of an image: docker image history --no-trunc <IMAGE:TAG>
+  - Scout:
+    - Display CVEs identified in a software artifact: docker scout cves <IMAGE:TAG>
+  - Swarm:
+    - Manage swarm: docker swarm <COMMAND>
+* Dockerfile commands (https://docs.docker.com/reference/dockerfile/):
+  - ADD: Add local or remote files and directories. Automatically unpacks as a directory if src is a local tar archive in a recognized compression format.
+  - FROM: Create a new build stage from a base image. FROM scratch (starts from a special empty base)
+  - USER: Set user and group ID.

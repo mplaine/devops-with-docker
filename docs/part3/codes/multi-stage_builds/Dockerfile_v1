@@ -1,0 +1,11 @@
+FROM ruby:3
+
+WORKDIR /usr/app
+
+RUN gem install jekyll
+RUN jekyll new .
+RUN jekyll build
+
+EXPOSE 4000
+
+CMD bundle exec jekyll serve --host 0.0.0.0
